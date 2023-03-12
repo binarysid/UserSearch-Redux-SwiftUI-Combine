@@ -22,6 +22,8 @@
 		0666A6EC29BE70E800B106FE /* Injector+Wrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666A6EA29BE70E800B106FE /* Injector+Wrapper.swift */; };
 		0666A6ED29BE70E800B106FE /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666A6EB29BE70E800B106FE /* DIContainer.swift */; };
 		0666A6EF29BE718700B106FE /* SearchAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666A6EE29BE718700B106FE /* SearchAPIClient.swift */; };
+		0666A6F729BE728300B106FE /* @Mock-GitUsers.json in Resources */ = {isa = PBXBuildFile; fileRef = 0666A6F629BE728300B106FE /* @Mock-GitUsers.json */; };
+		0666A6F929BE73C900B106FE /* SearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666A6F829BE73C900B106FE /* SearchRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 		0666A6EA29BE70E800B106FE /* Injector+Wrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Injector+Wrapper.swift"; sourceTree = "<group>"; };
 		0666A6EB29BE70E800B106FE /* DIContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		0666A6EE29BE718700B106FE /* SearchAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchAPIClient.swift; sourceTree = "<group>"; };
+		0666A6F629BE728300B106FE /* @Mock-GitUsers.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "@Mock-GitUsers.json"; sourceTree = "<group>"; };
+		0666A6F829BE73C900B106FE /* SearchRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,7 @@
 		0666A6B829BE6B0E00B106FE /* GithubUserSearchTests */ = {
 			isa = PBXGroup;
 			children = (
+				0666A6F029BE720C00B106FE /* Modules */,
 				0666A6B929BE6B0E00B106FE /* GithubUserSearchTests.swift */,
 			);
 			path = GithubUserSearchTests;
@@ -173,6 +178,7 @@
 		0666A6DA29BE6C5800B106FE /* Data Layer */ = {
 			isa = PBXGroup;
 			children = (
+				0666A6F829BE73C900B106FE /* SearchRepository.swift */,
 				0666A6EE29BE718700B106FE /* SearchAPIClient.swift */,
 				0666A6E029BE6EB200B106FE /* APIManager.swift */,
 				0666A6DB29BE6C7400B106FE /* SearchModel.swift */,
@@ -213,6 +219,54 @@
 				0666A6EB29BE70E800B106FE /* DIContainer.swift */,
 			);
 			path = "DI Manager";
+			sourceTree = "<group>";
+		};
+		0666A6F029BE720C00B106FE /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				0666A6F129BE721400B106FE /* Search */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		0666A6F129BE721400B106FE /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				0666A6F329BE722000B106FE /* Mocks */,
+				0666A6F229BE721B00B106FE /* Tests */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		0666A6F229BE721B00B106FE /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		0666A6F329BE722000B106FE /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				0666A6F529BE724D00B106FE /* Classes */,
+				0666A6F429BE724800B106FE /* Data */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		0666A6F429BE724800B106FE /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0666A6F629BE728300B106FE /* @Mock-GitUsers.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		0666A6F529BE724D00B106FE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,6 +382,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0666A6F729BE728300B106FE /* @Mock-GitUsers.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +402,7 @@
 			files = (
 				0666A6DC29BE6C7400B106FE /* SearchModel.swift in Sources */,
 				0666A6E629BE6F1900B106FE /* SearchContract.swift in Sources */,
+				0666A6F929BE73C900B106FE /* SearchRepository.swift in Sources */,
 				0666A6AB29BE6B0C00B106FE /* ContentView.swift in Sources */,
 				0666A6EC29BE70E800B106FE /* Injector+Wrapper.swift in Sources */,
 				0666A6E129BE6EB200B106FE /* APIManager.swift in Sources */,
