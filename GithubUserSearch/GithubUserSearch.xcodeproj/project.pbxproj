@@ -21,9 +21,12 @@
 		0666A6E729BE6F1900B106FE /* ViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666A6E529BE6F1800B106FE /* ViewConfigurator.swift */; };
 		0666A6EC29BE70E800B106FE /* Injector+Wrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666A6EA29BE70E800B106FE /* Injector+Wrapper.swift */; };
 		0666A6ED29BE70E800B106FE /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666A6EB29BE70E800B106FE /* DIContainer.swift */; };
-		0666A6EF29BE718700B106FE /* SearchAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666A6EE29BE718700B106FE /* SearchAPIClient.swift */; };
+		0666A6EF29BE718700B106FE /* SearchAPIDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666A6EE29BE718700B106FE /* SearchAPIDataSource.swift */; };
 		0666A6F729BE728300B106FE /* @Mock-GitUsers.json in Resources */ = {isa = PBXBuildFile; fileRef = 0666A6F629BE728300B106FE /* @Mock-GitUsers.json */; };
 		0666A6F929BE73C900B106FE /* SearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666A6F829BE73C900B106FE /* SearchRepository.swift */; };
+		0666A6FB29BE757C00B106FE /* MockSearchAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666A6FA29BE757C00B106FE /* MockSearchAPIClient.swift */; };
+		0666A6FE29BE77D500B106FE /* SearchRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666A6FD29BE77D500B106FE /* SearchRepositoryTest.swift */; };
+		0666A70029BE7EFA00B106FE /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666A6FF29BE7EFA00B106FE /* APIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,9 +64,13 @@
 		0666A6E529BE6F1800B106FE /* ViewConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewConfigurator.swift; sourceTree = "<group>"; };
 		0666A6EA29BE70E800B106FE /* Injector+Wrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Injector+Wrapper.swift"; sourceTree = "<group>"; };
 		0666A6EB29BE70E800B106FE /* DIContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
-		0666A6EE29BE718700B106FE /* SearchAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchAPIClient.swift; sourceTree = "<group>"; };
+		0666A6EE29BE718700B106FE /* SearchAPIDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchAPIDataSource.swift; sourceTree = "<group>"; };
 		0666A6F629BE728300B106FE /* @Mock-GitUsers.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "@Mock-GitUsers.json"; sourceTree = "<group>"; };
 		0666A6F829BE73C900B106FE /* SearchRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchRepository.swift; sourceTree = "<group>"; };
+		0666A6FA29BE757C00B106FE /* MockSearchAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchAPIClient.swift; sourceTree = "<group>"; };
+		0666A6FC29BE772F00B106FE /* @Mock-Empty-GitUsers.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "@Mock-Empty-GitUsers.json"; sourceTree = "<group>"; };
+		0666A6FD29BE77D500B106FE /* SearchRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepositoryTest.swift; sourceTree = "<group>"; };
+		0666A6FF29BE7EFA00B106FE /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,9 +186,10 @@
 			isa = PBXGroup;
 			children = (
 				0666A6F829BE73C900B106FE /* SearchRepository.swift */,
-				0666A6EE29BE718700B106FE /* SearchAPIClient.swift */,
+				0666A6EE29BE718700B106FE /* SearchAPIDataSource.swift */,
 				0666A6E029BE6EB200B106FE /* APIManager.swift */,
 				0666A6DB29BE6C7400B106FE /* SearchModel.swift */,
+				0666A6FF29BE7EFA00B106FE /* APIClient.swift */,
 			);
 			path = "Data Layer";
 			sourceTree = "<group>";
@@ -241,6 +249,7 @@
 		0666A6F229BE721B00B106FE /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				0666A6FD29BE77D500B106FE /* SearchRepositoryTest.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -258,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				0666A6F629BE728300B106FE /* @Mock-GitUsers.json */,
+				0666A6FC29BE772F00B106FE /* @Mock-Empty-GitUsers.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -265,6 +275,7 @@
 		0666A6F529BE724D00B106FE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				0666A6FA29BE757C00B106FE /* MockSearchAPIClient.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -406,11 +417,12 @@
 				0666A6AB29BE6B0C00B106FE /* ContentView.swift in Sources */,
 				0666A6EC29BE70E800B106FE /* Injector+Wrapper.swift in Sources */,
 				0666A6E129BE6EB200B106FE /* APIManager.swift in Sources */,
-				0666A6EF29BE718700B106FE /* SearchAPIClient.swift in Sources */,
+				0666A6EF29BE718700B106FE /* SearchAPIDataSource.swift in Sources */,
 				0666A6A929BE6B0C00B106FE /* GithubUserSearchApp.swift in Sources */,
 				0666A6DF29BE6DE800B106FE /* SearchDTO.swift in Sources */,
 				0666A6ED29BE70E800B106FE /* DIContainer.swift in Sources */,
 				0666A6E729BE6F1900B106FE /* ViewConfigurator.swift in Sources */,
+				0666A70029BE7EFA00B106FE /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +431,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0666A6BA29BE6B0E00B106FE /* GithubUserSearchTests.swift in Sources */,
+				0666A6FB29BE757C00B106FE /* MockSearchAPIClient.swift in Sources */,
+				0666A6FE29BE77D500B106FE /* SearchRepositoryTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

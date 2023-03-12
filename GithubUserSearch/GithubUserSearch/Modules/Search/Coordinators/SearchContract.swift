@@ -18,8 +18,8 @@ protocol SearchUseCaseProtocol{
 protocol SearchRepositoryProtocol{
     func getData(by name:String) async-> Result<[SearchDTO],APIManager.CustomError>
 }
-protocol SearchAPIClientProtocol{
-    func getData(by name:String) async ->
+protocol SearchAPIDataSourceProtocol{
+    func getSearchData(by name:String) async ->
     Result<[GitHubUser],APIManager.CustomError>
 }
 

@@ -9,16 +9,21 @@ import Foundation
 
 struct SearchRepository:SearchRepositoryProtocol{
     @Inject
-    private var dataSource:SearchAPIClientProtocol
+    private var dataSource:SearchAPIDataSourceProtocol
     func getData(by name:String) async-> Result<[SearchDTO],APIManager.CustomError>{
         
-        let result = await dataSource.getData(by: name)
+        let result = await dataSource.getSearchData(by: name)
         guard case .success(let data) = result else{
             return .failure(.ServiceNotFound)
         }
-        let users = data.map{ $0.toDomainObj() }
+        let users = self.mapToDTO(data: data)
         return .success(users)
     }
 }
 
+extension SearchRepository{
+    func mapToDTO(data:[GitHubUser])->[SearchDTO]{
+        data.map{ $0.toDomainObj() }
+    }
+}
 
