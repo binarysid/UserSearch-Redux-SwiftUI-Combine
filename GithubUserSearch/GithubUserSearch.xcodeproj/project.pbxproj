@@ -19,6 +19,8 @@
 		0666A6E129BE6EB200B106FE /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666A6E029BE6EB200B106FE /* APIManager.swift */; };
 		0666A6E629BE6F1900B106FE /* SearchContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666A6E429BE6F1800B106FE /* SearchContract.swift */; };
 		0666A6E729BE6F1900B106FE /* ViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666A6E529BE6F1800B106FE /* ViewConfigurator.swift */; };
+		0666A6EC29BE70E800B106FE /* Injector+Wrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666A6EA29BE70E800B106FE /* Injector+Wrapper.swift */; };
+		0666A6ED29BE70E800B106FE /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666A6EB29BE70E800B106FE /* DIContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		0666A6E029BE6EB200B106FE /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		0666A6E429BE6F1800B106FE /* SearchContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchContract.swift; sourceTree = "<group>"; };
 		0666A6E529BE6F1800B106FE /* ViewConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewConfigurator.swift; sourceTree = "<group>"; };
+		0666A6EA29BE70E800B106FE /* Injector+Wrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Injector+Wrapper.swift"; sourceTree = "<group>"; };
+		0666A6EB29BE70E800B106FE /* DIContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,8 +108,8 @@
 		0666A6A729BE6B0C00B106FE /* GithubUserSearch */ = {
 			isa = PBXGroup;
 			children = (
+				0666A6E829BE70C700B106FE /* Root */,
 				0666A6D229BE6BE300B106FE /* Modules */,
-				0666A6A829BE6B0C00B106FE /* GithubUserSearchApp.swift */,
 				0666A6AA29BE6B0C00B106FE /* ContentView.swift */,
 				0666A6AC29BE6B0E00B106FE /* Assets.xcassets */,
 				0666A6AE29BE6B0E00B106FE /* Preview Content */,
@@ -188,6 +192,24 @@
 				0666A6E529BE6F1800B106FE /* ViewConfigurator.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		0666A6E829BE70C700B106FE /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				0666A6E929BE70E800B106FE /* DI Manager */,
+				0666A6A829BE6B0C00B106FE /* GithubUserSearchApp.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		0666A6E929BE70E800B106FE /* DI Manager */ = {
+			isa = PBXGroup;
+			children = (
+				0666A6EA29BE70E800B106FE /* Injector+Wrapper.swift */,
+				0666A6EB29BE70E800B106FE /* DIContainer.swift */,
+			);
+			path = "DI Manager";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,9 +345,11 @@
 				0666A6DC29BE6C7400B106FE /* SearchModel.swift in Sources */,
 				0666A6E629BE6F1900B106FE /* SearchContract.swift in Sources */,
 				0666A6AB29BE6B0C00B106FE /* ContentView.swift in Sources */,
+				0666A6EC29BE70E800B106FE /* Injector+Wrapper.swift in Sources */,
 				0666A6E129BE6EB200B106FE /* APIManager.swift in Sources */,
 				0666A6A929BE6B0C00B106FE /* GithubUserSearchApp.swift in Sources */,
 				0666A6DF29BE6DE800B106FE /* SearchDTO.swift in Sources */,
+				0666A6ED29BE70E800B106FE /* DIContainer.swift in Sources */,
 				0666A6E729BE6F1900B106FE /* ViewConfigurator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
