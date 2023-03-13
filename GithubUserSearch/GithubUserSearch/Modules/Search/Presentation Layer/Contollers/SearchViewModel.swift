@@ -16,13 +16,7 @@ final class SearchViewModel:SearchViewModelProtocol{
     private var cancellables: Set<AnyCancellable> = []
 
     init() {
-        $searchQuery
-            .debounce(for: .milliseconds(500), scheduler: DispatchQueue.main)
-            .removeDuplicates()
-            .sink { [weak self] query in
-                self?.search(query: query)
-            }
-            .store(in: &cancellables)
+        self.searchTextBinding()
     }
 
     func search(query: String) {
@@ -35,5 +29,17 @@ final class SearchViewModel:SearchViewModelProtocol{
                 self.data = data
             })
         }
+    }
+}
+
+extension SearchViewModel{
+    private func searchTextBinding(){
+        $searchQuery
+            .debounce(for: .milliseconds(500), scheduler: DispatchQueue.main)
+            .removeDuplicates()
+            .sink { [weak self] query in
+                self?.search(query: query)
+            }
+            .store(in: &cancellables)
     }
 }
