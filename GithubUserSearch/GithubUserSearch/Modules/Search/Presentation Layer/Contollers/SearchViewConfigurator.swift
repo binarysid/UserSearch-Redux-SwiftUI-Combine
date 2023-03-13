@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// This configurator builds the Search View along with all it's dependencies required to perform all search related tasks
 struct SearchViewConfigurator: ViewConfiguratorProtocol{
     func configure() -> some View {
         self.registerDependency()
