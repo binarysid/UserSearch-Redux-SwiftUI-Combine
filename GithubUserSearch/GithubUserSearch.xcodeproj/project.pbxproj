@@ -189,6 +189,7 @@
 			children = (
 				0666A6D329BE6BEB00B106FE /* Search */,
 				0666A6D429BE6BF500B106FE /* Details */,
+				0678927729BF67670059B8E2 /* Core */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -218,7 +219,6 @@
 				0666A6EE29BE718700B106FE /* SearchAPIDataSource.swift */,
 				0666A6E029BE6EB200B106FE /* APIManager.swift */,
 				0666A6DB29BE6C7400B106FE /* SearchModel.swift */,
-				0666A6FF29BE7EFA00B106FE /* APIClient.swift */,
 			);
 			path = "Data Layer";
 			sourceTree = "<group>";
@@ -244,7 +244,6 @@
 		0666A6E829BE70C700B106FE /* Root */ = {
 			isa = PBXGroup;
 			children = (
-				0666A6E929BE70E800B106FE /* DI Manager */,
 				0666A6A829BE6B0C00B106FE /* GithubUserSearchApp.swift */,
 			);
 			path = Root;
@@ -432,6 +431,15 @@
 				0678926D29BF65860059B8E2 /* SearchBar.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		0678927729BF67670059B8E2 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				0666A6FF29BE7EFA00B106FE /* APIClient.swift */,
+				0666A6E929BE70E800B106FE /* DI Manager */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

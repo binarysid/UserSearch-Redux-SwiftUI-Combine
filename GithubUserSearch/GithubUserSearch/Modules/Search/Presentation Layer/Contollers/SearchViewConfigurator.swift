@@ -15,7 +15,8 @@ struct SearchViewConfigurator: ViewConfigurator{
     }
     private func registerDependency(){
         let container = DIContainer.shared
-        container.register(type: SearchAPIClientProtocol.self, component: SearchAPIClient())
+        container.register(type: APIClientProtocol.self, component: APIClient())
+        container.register(type: SearchAPIDataSourceProtocol.self, component: SearchAPIDataSource())
         container.register(type: SearchRepositoryProtocol.self, component: SearchRepository())
         container.register(type: SearchUseCaseProtocol.self, component: SearchUseCase())
     }
