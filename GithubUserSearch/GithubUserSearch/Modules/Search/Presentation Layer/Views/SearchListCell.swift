@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SearchListCell: View {
     
-    @State var item: SearchDTO
+    @State var item: SearchViewData
     
     var body: some View {
         HStack{

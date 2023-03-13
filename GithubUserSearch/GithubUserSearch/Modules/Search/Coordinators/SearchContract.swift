@@ -10,7 +10,7 @@ import Foundation
 // all the contracts that builds the workflow View->ViewModel->UseCase->Repository->DataSource
 protocol SearchViewModelProtocol:ObservableObject{
     var searchQuery: String{get set}
-    var data:[SearchDTO]{get}
+    var viewData:[SearchViewData]{get}
     func cancelSearchTask()
 }
 

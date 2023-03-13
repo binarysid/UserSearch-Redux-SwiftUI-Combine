@@ -22,7 +22,7 @@ final class SearchRepositoryTest: XCTestCase {
         expectation = expectation(description: "Git user search repository test expectation")
     }
     func test_non_empty_DTO() async{
-        let result = await repository.getData(by: "")
+        let result = await repository.getData(by: "", limit: 30)
         guard case .success(let data) = result else{
             XCTFail("No Data Found from repository")
             self.expectation.fulfill()

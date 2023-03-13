@@ -13,7 +13,7 @@ final class SearchViewModel:SearchViewModelProtocol{
     @Inject
     private var searchUseCase: SearchUseCaseProtocol
     @Published var searchQuery: String = ""
-    @MainActor @Published var data:[SearchDTO] = []
+    @MainActor @Published var viewData:[SearchViewData] = []
     private var cancellables: Set<AnyCancellable> = []
     private var searchTask:Task<(), Never>? = nil
     
@@ -51,11 +51,20 @@ extension SearchViewModel{
                 return
             }
             await MainActor.run(body: { //update the data on main thread as this will be updating the view
-                self.data = data
+                self.viewData = data.map{
+                    mapPresentationData(from: $0)
+                }
             })
         }
     }
     private func isSearchTaskRunning()->Bool{
         searchTask != nil
+    }
+}
+
+// MARK: Presentation
+extension SearchViewModel{
+    private func mapPresentationData(from data:SearchDTO)->SearchViewData{
+        SearchViewData(id: data.id, name: data.name,avatar: URL(string: data.avatar ?? ""), repos: URL(string: data.repos ?? ""), followers: URL(string: data.followers ?? ""))
     }
 }

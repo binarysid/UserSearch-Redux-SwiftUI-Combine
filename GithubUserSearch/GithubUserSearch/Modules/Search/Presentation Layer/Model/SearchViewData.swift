@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct SearchViewData:Identifiable{
+    var id:Int
+    var name:String
+    var avatar:URL?
+    var repos:URL?
+    var followers:URL?
+}

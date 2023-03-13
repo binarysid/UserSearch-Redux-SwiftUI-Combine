@@ -16,7 +16,7 @@ struct SearchView<T:SearchViewModelProtocol>: View {
             VStack {
                 SearchBar(text: $viewModel.searchQuery)
                     .padding(.top)
-                SearchResultsView(data: viewModel.data)
+                SearchResultsView(data: viewModel.viewData)
             }
         }
         .navigationBarTitle(Text(AppConstants.Common.Title.main))

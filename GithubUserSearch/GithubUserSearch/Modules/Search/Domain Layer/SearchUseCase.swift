@@ -15,7 +15,7 @@ struct SearchUseCase:SearchUseCaseProtocol {
     
     func search(by name:String) async-> Result<[SearchDTO],APIManager.CustomError>{
         
-        let result = await repository.getData(by: name, limit: 30)
+        let result = await repository.getData(by: name, limit: 20)
         return result
     }
 }

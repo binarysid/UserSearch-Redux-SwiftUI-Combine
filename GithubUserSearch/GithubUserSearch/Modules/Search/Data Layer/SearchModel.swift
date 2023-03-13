@@ -24,16 +24,18 @@ struct GitHubUser: Codable {
     let id: Int
     let avatarUrl: String
     let reposUrl: String
+    let followersUrl: String
     
     enum CodingKeys: String, CodingKey {
         case login, id
         case avatarUrl = "avatar_url"
         case reposUrl = "repos_url"
+        case followersUrl = "followers_url"
     }
 }
 
 extension GitHubUser{
     func toDomainObj()->SearchDTO{
-        return SearchDTO(id: id, name: login, avatar: URL(string: avatarUrl),repos:URL(string: reposUrl))
+        return SearchDTO(id: id, name: login, avatar: avatarUrl,repos:reposUrl,followers: followersUrl)
     }
 }

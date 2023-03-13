@@ -7,10 +7,11 @@
 
 import Foundation
 
-struct SearchDTO:Identifiable{
+struct SearchDTO{
     var id:Int
     var name:String
-    var avatar:URL?
-    var repos:URL?
+    var avatar:String?
+    var repos:String?
+    let followers: String?
 }
 

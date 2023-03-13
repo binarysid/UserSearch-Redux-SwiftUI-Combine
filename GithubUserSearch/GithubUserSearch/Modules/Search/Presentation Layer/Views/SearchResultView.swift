@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SearchResultsView: View {
     
-    var data: [SearchDTO] = []
+    var data: [SearchViewData] = []
     
     var body: some View {
         List(data) { result in
