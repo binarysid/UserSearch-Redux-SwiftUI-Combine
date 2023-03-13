@@ -17,16 +17,16 @@ final class MockSearchAPIDataSource:SearchAPIDataSourceProtocol{
         let testBundle = Bundle(for: GithubUserSearchTests.self)
         guard let url =
                 testBundle.url(forResource:dataSource,withExtension:"json") else{
-            return .failure(.BadURL)
+            return .failure(.badURL)
         }
         do
         {
             let data = try Data(contentsOf: url)
             let userData = try JSONDecoder().decode(GitHubResponse.self, from: data)
-            guard userData.items.count>0 else{return .failure(.NoDataFound)}
+            guard userData.items.count>0 else{return .failure(.noDataFound)}
             return .success(userData.items)
         }catch{
-            return .failure(.ServiceNotFound)
+            return .failure(.serviceNotFound)
         }
     }
     

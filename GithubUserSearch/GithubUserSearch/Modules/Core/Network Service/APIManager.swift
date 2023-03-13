@@ -2,27 +2,23 @@
 import Foundation
 
 struct APIManager{
-    enum HTTPMethods{
-        static let GET = "GET"
-        static let POST = "POST"
-    }
     enum CustomError:Error{
-        case ServiceNotFound
-        case BadURL
-        case NoDataFound
+        case serviceNotFound
+        case badURL
+        case noDataFound
         case duplicate
         case invalidResponse(URLResponse?)
         case invalidJSON(Error)
-
+        
         var errorDescription: String {
-          switch self {
-          case .ServiceNotFound: return "Service unreachable"
-          case .BadURL: return "Invalid URL"
-          case .NoDataFound: return "No data found"
-          case .duplicate: return "Duplicate found"
-          case .invalidResponse(let err): return err?.description ?? "invalid response"
-          case .invalidJSON(let err): return err.localizedDescription
-          }
+            switch self {
+            case .serviceNotFound: return "Service unreachable"
+            case .badURL: return "Invalid URL"
+            case .noDataFound: return "No data found"
+            case .duplicate: return "Duplicate found"
+            case .invalidResponse(let err): return err?.description ?? "invalid response"
+            case .invalidJSON(let err): return err.localizedDescription
+            }
         }
     }
     
@@ -30,11 +26,11 @@ struct APIManager{
         static let baseURL =  "https://" + Config.stringValue(forKey: "BASE_URL")
         static let token = Config.stringValue(forKey: "API_KEY")
         
-        case Users(name:String)
+        case userSearch(name:String)
         
         var request:URLRequest?{
             switch self{
-            case .Users(let name):
+            case .userSearch(let name):
                 let url = EndPoints.baseURL + "/search/users"
                 return APIManager.getURLRequest(baseURL: url,token:EndPoints.token, paramters: ["q":name])
             }

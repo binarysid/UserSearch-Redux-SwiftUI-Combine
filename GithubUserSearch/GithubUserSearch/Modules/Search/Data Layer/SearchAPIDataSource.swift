@@ -8,19 +8,21 @@
 import Foundation
 
 struct SearchAPIDataSource:SearchAPIDataSourceProtocol{
+    
     @Inject
     private var apiClient:APIClientProtocol
+    
     func getSearchData(by name:String) async -> Result<[GitHubUser],APIManager.CustomError> {
-        guard let request = APIManager.EndPoints.Users(name: name).request else{
-            return .failure(.BadURL)
+        guard let request = APIManager.EndPoints.userSearch(name: name).request else{
+            return .failure(.badURL)
         }
         do {
             let (data, _) = try await apiClient.getData(for: request)
             let userData = try JSONDecoder().decode(GitHubResponse.self, from: data)
-            guard userData.items.count>0 else{return .failure(.NoDataFound)}
+            guard userData.items.count>0 else{return .failure(.noDataFound)}
             return .success(userData.items)
         } catch{
-            return .failure(.ServiceNotFound)
+            return .failure(.serviceNotFound)
         }
     }
 }

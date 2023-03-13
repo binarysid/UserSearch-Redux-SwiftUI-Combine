@@ -13,12 +13,15 @@ protocol SearchViewModelProtocol:ObservableObject{
     var data:[SearchDTO]{get}
     func cancelSearchTask()
 }
+
 protocol SearchUseCaseProtocol{
     func search(by name:String) async-> Result<[SearchDTO],APIManager.CustomError>
 }
+
 protocol SearchRepositoryProtocol{
     func getData(by name:String) async-> Result<[SearchDTO],APIManager.CustomError>
 }
+
 protocol SearchAPIDataSourceProtocol{
     func getSearchData(by name:String) async ->
     Result<[GitHubUser],APIManager.CustomError>

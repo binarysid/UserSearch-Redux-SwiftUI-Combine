@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct SearchResultsView: View {
+    
     var data: [SearchDTO] = []
+    
     var body: some View {
         List(data) { result in
             SearchListCell(item: result)

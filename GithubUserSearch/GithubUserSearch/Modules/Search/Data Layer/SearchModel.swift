@@ -11,7 +11,7 @@ struct GitHubResponse: Codable {
     let totalCount: Int?
     let incompleteResults: Bool?
     let items: [GitHubUser]
-
+    
     enum CodingKeys: String, CodingKey {
         case totalCount = "total_count"
         case incompleteResults = "incomplete_results"
@@ -24,7 +24,7 @@ struct GitHubUser: Codable {
     let id: Int
     let avatarUrl: String
     let reposUrl: String
-
+    
     enum CodingKeys: String, CodingKey {
         case login, id
         case avatarUrl = "avatar_url"

@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-// This protocol is for configuring views. Defines relationships between each component of a domain
-protocol ViewConfigurator{
+// This is for configuring views. Wiring dependencies and relationships between each component of a domain, required to build the View
+protocol ViewConfiguratorProtocol{
     associatedtype T:View
     func configure()->T
 }

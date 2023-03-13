@@ -7,12 +7,16 @@
 
 import SwiftUI
 
-struct SearchViewConfigurator: ViewConfigurator{
+struct SearchViewConfigurator: ViewConfiguratorProtocol{
     func configure() -> some View {
         self.registerDependency()
         let viewModel = SearchViewModel()
         return SearchView(viewModel: viewModel)
     }
+}
+
+// MARK: Dependency Registration
+extension SearchViewConfigurator{
     private func registerDependency(){
         let container = DIContainer.shared
         container.register(type: APIClientProtocol.self, component: APIClient())
@@ -21,4 +25,3 @@ struct SearchViewConfigurator: ViewConfigurator{
         container.register(type: SearchUseCaseProtocol.self, component: SearchUseCase())
     }
 }
-

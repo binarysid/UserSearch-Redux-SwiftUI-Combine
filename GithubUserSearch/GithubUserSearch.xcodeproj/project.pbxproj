@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0666A6A929BE6B0C00B106FE /* GithubUserSearchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666A6A829BE6B0C00B106FE /* GithubUserSearchApp.swift */; };
+		0666A6A929BE6B0C00B106FE /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666A6A829BE6B0C00B106FE /* MainApp.swift */; };
 		0666A6AD29BE6B0E00B106FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0666A6AC29BE6B0E00B106FE /* Assets.xcassets */; };
 		0666A6B029BE6B0E00B106FE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0666A6AF29BE6B0E00B106FE /* Preview Assets.xcassets */; };
 		0666A6BA29BE6B0E00B106FE /* GithubUserSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666A6B929BE6B0E00B106FE /* GithubUserSearchTests.swift */; };
@@ -64,7 +64,7 @@
 
 /* Begin PBXFileReference section */
 		0666A6A529BE6B0C00B106FE /* GithubUserSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubUserSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0666A6A829BE6B0C00B106FE /* GithubUserSearchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUserSearchApp.swift; sourceTree = "<group>"; };
+		0666A6A829BE6B0C00B106FE /* MainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApp.swift; sourceTree = "<group>"; };
 		0666A6AC29BE6B0E00B106FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0666A6AF29BE6B0E00B106FE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0666A6B529BE6B0E00B106FE /* GithubUserSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GithubUserSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,7 +158,7 @@
 			children = (
 				0666A6D229BE6BE300B106FE /* Modules */,
 				0666A6E829BE70C700B106FE /* Root */,
-				0678927B29BF87020059B8E2 /* ENV */,
+				0678927B29BF87020059B8E2 /* Env */,
 				0678927829BF68D30059B8E2 /* Resources */,
 				0666A6AE29BE6B0E00B106FE /* Preview Content */,
 				0678927F29BF89730059B8E2 /* Info.plist */,
@@ -252,7 +252,7 @@
 		0666A6E829BE70C700B106FE /* Root */ = {
 			isa = PBXGroup;
 			children = (
-				0666A6A829BE6B0C00B106FE /* GithubUserSearchApp.swift */,
+				0666A6A829BE6B0C00B106FE /* MainApp.swift */,
 				0678928029BF8C5C0059B8E2 /* Config.swift */,
 			);
 			path = Root;
@@ -446,7 +446,7 @@
 		0678927729BF67670059B8E2 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				0678927E29BF88580059B8E2 /* NetworkServices */,
+				0678927E29BF88580059B8E2 /* Network Service */,
 				0666A6E929BE70E800B106FE /* DI Manager */,
 			);
 			path = Core;
@@ -460,22 +460,22 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		0678927B29BF87020059B8E2 /* ENV */ = {
+		0678927B29BF87020059B8E2 /* Env */ = {
 			isa = PBXGroup;
 			children = (
 				0678927C29BF87240059B8E2 /* Debug.xcconfig */,
 				0678927D29BF87310059B8E2 /* Release.xcconfig */,
 			);
-			path = ENV;
+			path = Env;
 			sourceTree = "<group>";
 		};
-		0678927E29BF88580059B8E2 /* NetworkServices */ = {
+		0678927E29BF88580059B8E2 /* Network Service */ = {
 			isa = PBXGroup;
 			children = (
 				0666A6FF29BE7EFA00B106FE /* APIClient.swift */,
 				0666A6E029BE6EB200B106FE /* APIManager.swift */,
 			);
-			path = NetworkServices;
+			path = "Network Service";
 			sourceTree = "<group>";
 		};
 		0678928229BF8D950059B8E2 /* Router */ = {
@@ -639,7 +639,7 @@
 				0678927429BF663E0059B8E2 /* SearchView.swift in Sources */,
 				0666A6EF29BE718700B106FE /* SearchAPIDataSource.swift in Sources */,
 				0678925E29BF436F0059B8E2 /* SearchViewModel.swift in Sources */,
-				0666A6A929BE6B0C00B106FE /* GithubUserSearchApp.swift in Sources */,
+				0666A6A929BE6B0C00B106FE /* MainApp.swift in Sources */,
 				0666A6DF29BE6DE800B106FE /* SearchDTO.swift in Sources */,
 				0666A6ED29BE70E800B106FE /* DIContainer.swift in Sources */,
 				0666A6E729BE6F1900B106FE /* ViewConfigurator.swift in Sources */,

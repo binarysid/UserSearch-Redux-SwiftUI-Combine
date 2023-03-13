@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct SearchView<T:SearchViewModelProtocol>: View {
+    
     @ObservedObject var viewModel: T
-
+    
     var body: some View {
         NavigationView{
             VStack {
@@ -23,7 +24,6 @@ struct SearchView<T:SearchViewModelProtocol>: View {
             viewModel.cancelSearchTask()
         }
     }
-        
 }
 
 //struct ContentView_Previews: PreviewProvider {

@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct GithubUserSearchApp: App {
+struct MainApp: App {
     var body: some Scene {
         WindowGroup {
             SearchViewConfigurator().configure()

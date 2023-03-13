@@ -19,6 +19,7 @@ struct AppConstants{
         }
         enum ActionTitle{
             static let search = "Search"
+            static let cancel = "Cancel"
         }
     }
     
