@@ -31,6 +31,7 @@
 		0678925429BF3FB20059B8E2 /* SearchUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0678925329BF3FB20059B8E2 /* SearchUseCaseTest.swift */; };
 		0678925A29BF404A0059B8E2 /* MockSearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0678925929BF404A0059B8E2 /* MockSearchRepository.swift */; };
 		0678925E29BF436F0059B8E2 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0678925D29BF436F0059B8E2 /* SearchViewModel.swift */; };
+		0678926229BF465C0059B8E2 /* SearchDTOMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0678926129BF465C0059B8E2 /* SearchDTOMock.swift */; };
 		067EFC8629BE8342009D6AAF /* MockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067EFC8529BE8342009D6AAF /* MockAPIClient.swift */; };
 		067EFC8A29BE83E1009D6AAF /* SearchAPIDataSourceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067EFC8929BE83E1009D6AAF /* SearchAPIDataSourceTest.swift */; };
 /* End PBXBuildFile section */
@@ -81,6 +82,7 @@
 		0678925329BF3FB20059B8E2 /* SearchUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUseCaseTest.swift; sourceTree = "<group>"; };
 		0678925929BF404A0059B8E2 /* MockSearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchRepository.swift; sourceTree = "<group>"; };
 		0678925D29BF436F0059B8E2 /* SearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		0678926129BF465C0059B8E2 /* SearchDTOMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDTOMock.swift; sourceTree = "<group>"; };
 		067EFC8529BE8342009D6AAF /* MockAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIClient.swift; sourceTree = "<group>"; };
 		067EFC8929BE83E1009D6AAF /* SearchAPIDataSourceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAPIDataSourceTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -325,7 +327,8 @@
 		0678925829BF40350059B8E2 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				0678925929BF404A0059B8E2 /* MockSearchRepository.swift */,
+				0678925F29BF46370059B8E2 /* Classes */,
+				0678926029BF46440059B8E2 /* Data */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -344,6 +347,22 @@
 				0678925D29BF436F0059B8E2 /* SearchViewModel.swift */,
 			);
 			path = Contollers;
+			sourceTree = "<group>";
+		};
+		0678925F29BF46370059B8E2 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0678925929BF404A0059B8E2 /* MockSearchRepository.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		0678926029BF46440059B8E2 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0678926129BF465C0059B8E2 /* SearchDTOMock.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -503,6 +522,7 @@
 				067EFC8629BE8342009D6AAF /* MockAPIClient.swift in Sources */,
 				0666A6FB29BE757C00B106FE /* MockSearchAPIDataSource.swift in Sources */,
 				0666A6FE29BE77D500B106FE /* SearchRepositoryTest.swift in Sources */,
+				0678926229BF465C0059B8E2 /* SearchDTOMock.swift in Sources */,
 				067EFC8A29BE83E1009D6AAF /* SearchAPIDataSourceTest.swift in Sources */,
 				0678925429BF3FB20059B8E2 /* SearchUseCaseTest.swift in Sources */,
 			);
