@@ -13,14 +13,14 @@ struct SearchBar: View {
  
     var body: some View {
         HStack {
-            TextField("Search ...", text: $text)
+            TextField(AppConstants.Common.Title.searchBar, text: $text)
                 .padding(7)
                 .padding(.horizontal, 25)
                 .background(Color(.systemGray6))
                 .cornerRadius(8)
                 .overlay(
                     HStack {
-                        Image(systemName: "magnifyingglass")
+                        Image(systemName: AppConstants.Common.Images.magnifyingGlass)
                             .foregroundColor(.gray)
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                             .padding(.leading, 8)
@@ -29,7 +29,7 @@ struct SearchBar: View {
                             Button(action: {
                                 self.text = ""
                             }) {
-                                Image(systemName: "multiply.circle.fill")
+                                Image(systemName: AppConstants.Common.Images.circleFill)
                                     .foregroundColor(.gray)
                                     .padding(.trailing, 8)
                             }

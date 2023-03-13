@@ -18,7 +18,7 @@ struct SearchView<T:SearchViewModelProtocol>: View {
                 SearchResultsView(data: viewModel.data)
             }
         }
-        .navigationBarTitle(Text("Github User Search"))
+        .navigationBarTitle(Text(AppConstants.Common.Title.main))
         .onDisappear{
             viewModel.cancelSearchTask()
         }

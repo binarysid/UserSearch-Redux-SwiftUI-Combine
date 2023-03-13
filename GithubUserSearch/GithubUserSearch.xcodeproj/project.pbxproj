@@ -40,6 +40,7 @@
 		0678927629BF66E70059B8E2 /* SearchViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0678927529BF66E70059B8E2 /* SearchViewConfigurator.swift */; };
 		0678927A29BF6A950059B8E2 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0678927929BF6A950059B8E2 /* SearchRouter.swift */; };
 		0678928129BF8C5C0059B8E2 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0678928029BF8C5C0059B8E2 /* Config.swift */; };
+		0678928529BF8E490059B8E2 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0678928429BF8E490059B8E2 /* AppConstants.swift */; };
 		067EFC8629BE8342009D6AAF /* MockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067EFC8529BE8342009D6AAF /* MockAPIClient.swift */; };
 		067EFC8A29BE83E1009D6AAF /* SearchAPIDataSourceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067EFC8929BE83E1009D6AAF /* SearchAPIDataSourceTest.swift */; };
 /* End PBXBuildFile section */
@@ -102,6 +103,7 @@
 		0678927D29BF87310059B8E2 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		0678927F29BF89730059B8E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0678928029BF8C5C0059B8E2 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		0678928429BF8E490059B8E2 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		067EFC8529BE8342009D6AAF /* MockAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIClient.swift; sourceTree = "<group>"; };
 		067EFC8929BE83E1009D6AAF /* SearchAPIDataSourceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAPIDataSourceTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -196,6 +198,7 @@
 				0666A6D329BE6BEB00B106FE /* Search */,
 				0666A6D429BE6BF500B106FE /* Details */,
 				0678927729BF67670059B8E2 /* Core */,
+				0678928329BF8DF00059B8E2 /* Helper */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -358,7 +361,7 @@
 			children = (
 				0678926C29BF65520059B8E2 /* Views */,
 				0678925C29BF43630059B8E2 /* Contollers */,
-				0678927929BF6A950059B8E2 /* SearchRouter.swift */,
+				0678928229BF8D950059B8E2 /* Router */,
 			);
 			path = "Presentation Layer";
 			sourceTree = "<group>";
@@ -443,7 +446,7 @@
 		0678927729BF67670059B8E2 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				0678927E29BF88580059B8E2 /* AsyncServices */,
+				0678927E29BF88580059B8E2 /* NetworkServices */,
 				0666A6E929BE70E800B106FE /* DI Manager */,
 			);
 			path = Core;
@@ -466,13 +469,29 @@
 			path = ENV;
 			sourceTree = "<group>";
 		};
-		0678927E29BF88580059B8E2 /* AsyncServices */ = {
+		0678927E29BF88580059B8E2 /* NetworkServices */ = {
 			isa = PBXGroup;
 			children = (
 				0666A6FF29BE7EFA00B106FE /* APIClient.swift */,
 				0666A6E029BE6EB200B106FE /* APIManager.swift */,
 			);
-			path = AsyncServices;
+			path = NetworkServices;
+			sourceTree = "<group>";
+		};
+		0678928229BF8D950059B8E2 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				0678927929BF6A950059B8E2 /* SearchRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		0678928329BF8DF00059B8E2 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				0678928429BF8E490059B8E2 /* AppConstants.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -610,6 +629,7 @@
 				0666A6DC29BE6C7400B106FE /* SearchModel.swift in Sources */,
 				0678927129BF65FC0059B8E2 /* SearchResultView.swift in Sources */,
 				0666A6E629BE6F1900B106FE /* SearchContract.swift in Sources */,
+				0678928529BF8E490059B8E2 /* AppConstants.swift in Sources */,
 				0678926E29BF65860059B8E2 /* SearchBar.swift in Sources */,
 				0678927229BF65FC0059B8E2 /* SearchListCell.swift in Sources */,
 				0666A6F929BE73C900B106FE /* SearchRepository.swift in Sources */,
