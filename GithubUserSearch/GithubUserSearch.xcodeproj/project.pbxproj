@@ -37,6 +37,7 @@
 		0678926E29BF65860059B8E2 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0678926D29BF65860059B8E2 /* SearchBar.swift */; };
 		0678927129BF65FC0059B8E2 /* SearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0678926F29BF65FC0059B8E2 /* SearchResultView.swift */; };
 		0678927229BF65FC0059B8E2 /* SearchListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0678927029BF65FC0059B8E2 /* SearchListCell.swift */; };
+		0678927429BF663E0059B8E2 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0678927329BF663E0059B8E2 /* SearchView.swift */; };
 		067EFC8629BE8342009D6AAF /* MockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067EFC8529BE8342009D6AAF /* MockAPIClient.swift */; };
 		067EFC8A29BE83E1009D6AAF /* SearchAPIDataSourceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067EFC8929BE83E1009D6AAF /* SearchAPIDataSourceTest.swift */; };
 /* End PBXBuildFile section */
@@ -93,6 +94,7 @@
 		0678926D29BF65860059B8E2 /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		0678926F29BF65FC0059B8E2 /* SearchResultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultView.swift; sourceTree = "<group>"; };
 		0678927029BF65FC0059B8E2 /* SearchListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchListCell.swift; sourceTree = "<group>"; };
+		0678927329BF663E0059B8E2 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		067EFC8529BE8342009D6AAF /* MockAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIClient.swift; sourceTree = "<group>"; };
 		067EFC8929BE83E1009D6AAF /* SearchAPIDataSourceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAPIDataSourceTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -421,6 +423,7 @@
 		0678926C29BF65520059B8E2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0678927329BF663E0059B8E2 /* SearchView.swift */,
 				0678927029BF65FC0059B8E2 /* SearchListCell.swift */,
 				0678926F29BF65FC0059B8E2 /* SearchResultView.swift */,
 				0678926D29BF65860059B8E2 /* SearchBar.swift */,
@@ -569,6 +572,7 @@
 				0678925229BF3E010059B8E2 /* SearchUseCase.swift in Sources */,
 				0666A6EC29BE70E800B106FE /* Injector+Wrapper.swift in Sources */,
 				0666A6E129BE6EB200B106FE /* APIManager.swift in Sources */,
+				0678927429BF663E0059B8E2 /* SearchView.swift in Sources */,
 				0666A6EF29BE718700B106FE /* SearchAPIDataSource.swift in Sources */,
 				0678925E29BF436F0059B8E2 /* SearchViewModel.swift in Sources */,
 				0666A6A929BE6B0C00B106FE /* GithubUserSearchApp.swift in Sources */,
