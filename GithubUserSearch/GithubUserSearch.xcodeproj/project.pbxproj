@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0666A6A929BE6B0C00B106FE /* GithubUserSearchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666A6A829BE6B0C00B106FE /* GithubUserSearchApp.swift */; };
-		0666A6AB29BE6B0C00B106FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666A6AA29BE6B0C00B106FE /* ContentView.swift */; };
 		0666A6AD29BE6B0E00B106FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0666A6AC29BE6B0E00B106FE /* Assets.xcassets */; };
 		0666A6B029BE6B0E00B106FE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0666A6AF29BE6B0E00B106FE /* Preview Assets.xcassets */; };
 		0666A6BA29BE6B0E00B106FE /* GithubUserSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666A6B929BE6B0E00B106FE /* GithubUserSearchTests.swift */; };
@@ -63,7 +62,6 @@
 /* Begin PBXFileReference section */
 		0666A6A529BE6B0C00B106FE /* GithubUserSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubUserSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0666A6A829BE6B0C00B106FE /* GithubUserSearchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUserSearchApp.swift; sourceTree = "<group>"; };
-		0666A6AA29BE6B0C00B106FE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0666A6AC29BE6B0E00B106FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0666A6AF29BE6B0E00B106FE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0666A6B529BE6B0E00B106FE /* GithubUserSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GithubUserSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,8 +149,7 @@
 			children = (
 				0666A6D229BE6BE300B106FE /* Modules */,
 				0666A6E829BE70C700B106FE /* Root */,
-				0666A6AA29BE6B0C00B106FE /* ContentView.swift */,
-				0666A6AC29BE6B0E00B106FE /* Assets.xcassets */,
+				0678927829BF68D30059B8E2 /* Resources */,
 				0666A6AE29BE6B0E00B106FE /* Preview Content */,
 			);
 			path = GithubUserSearch;
@@ -436,10 +433,18 @@
 		0678927729BF67670059B8E2 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				0666A6FF29BE7EFA00B106FE /* APIClient.swift */,
 				0666A6E929BE70E800B106FE /* DI Manager */,
+				0666A6FF29BE7EFA00B106FE /* APIClient.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		0678927829BF68D30059B8E2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0666A6AC29BE6B0E00B106FE /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -580,7 +585,6 @@
 				0678926E29BF65860059B8E2 /* SearchBar.swift in Sources */,
 				0678927229BF65FC0059B8E2 /* SearchListCell.swift in Sources */,
 				0666A6F929BE73C900B106FE /* SearchRepository.swift in Sources */,
-				0666A6AB29BE6B0C00B106FE /* ContentView.swift in Sources */,
 				0678925229BF3E010059B8E2 /* SearchUseCase.swift in Sources */,
 				0666A6EC29BE70E800B106FE /* Injector+Wrapper.swift in Sources */,
 				0666A6E129BE6EB200B106FE /* APIManager.swift in Sources */,
