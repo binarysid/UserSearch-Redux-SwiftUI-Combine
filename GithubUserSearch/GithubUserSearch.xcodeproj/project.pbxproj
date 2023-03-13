@@ -30,6 +30,7 @@
 		0678925229BF3E010059B8E2 /* SearchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0678925129BF3E010059B8E2 /* SearchUseCase.swift */; };
 		0678925429BF3FB20059B8E2 /* SearchUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0678925329BF3FB20059B8E2 /* SearchUseCaseTest.swift */; };
 		0678925A29BF404A0059B8E2 /* MockSearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0678925929BF404A0059B8E2 /* MockSearchRepository.swift */; };
+		0678925E29BF436F0059B8E2 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0678925D29BF436F0059B8E2 /* SearchViewModel.swift */; };
 		067EFC8629BE8342009D6AAF /* MockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067EFC8529BE8342009D6AAF /* MockAPIClient.swift */; };
 		067EFC8A29BE83E1009D6AAF /* SearchAPIDataSourceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067EFC8929BE83E1009D6AAF /* SearchAPIDataSourceTest.swift */; };
 /* End PBXBuildFile section */
@@ -79,6 +80,7 @@
 		0678925129BF3E010059B8E2 /* SearchUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchUseCase.swift; sourceTree = "<group>"; };
 		0678925329BF3FB20059B8E2 /* SearchUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUseCaseTest.swift; sourceTree = "<group>"; };
 		0678925929BF404A0059B8E2 /* MockSearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchRepository.swift; sourceTree = "<group>"; };
+		0678925D29BF436F0059B8E2 /* SearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		067EFC8529BE8342009D6AAF /* MockAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIClient.swift; sourceTree = "<group>"; };
 		067EFC8929BE83E1009D6AAF /* SearchAPIDataSourceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAPIDataSourceTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -178,6 +180,7 @@
 		0666A6D329BE6BEB00B106FE /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				0678925B29BF43370059B8E2 /* Presentation Layer */,
 				0666A6DD29BE6DCE00B106FE /* Domain Layer */,
 				0666A6DA29BE6C5800B106FE /* Data Layer */,
 				0666A6E329BE6F1800B106FE /* Coordinators */,
@@ -327,6 +330,22 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		0678925B29BF43370059B8E2 /* Presentation Layer */ = {
+			isa = PBXGroup;
+			children = (
+				0678925C29BF43630059B8E2 /* Contollers */,
+			);
+			path = "Presentation Layer";
+			sourceTree = "<group>";
+		};
+		0678925C29BF43630059B8E2 /* Contollers */ = {
+			isa = PBXGroup;
+			children = (
+				0678925D29BF436F0059B8E2 /* SearchViewModel.swift */,
+			);
+			path = Contollers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -466,6 +485,7 @@
 				0666A6EC29BE70E800B106FE /* Injector+Wrapper.swift in Sources */,
 				0666A6E129BE6EB200B106FE /* APIManager.swift in Sources */,
 				0666A6EF29BE718700B106FE /* SearchAPIDataSource.swift in Sources */,
+				0678925E29BF436F0059B8E2 /* SearchViewModel.swift in Sources */,
 				0666A6A929BE6B0C00B106FE /* GithubUserSearchApp.swift in Sources */,
 				0666A6DF29BE6DE800B106FE /* SearchDTO.swift in Sources */,
 				0666A6ED29BE70E800B106FE /* DIContainer.swift in Sources */,
