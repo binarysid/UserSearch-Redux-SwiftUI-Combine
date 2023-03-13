@@ -29,7 +29,7 @@ final class SearchViewModel:SearchViewModelProtocol{
 extension SearchViewModel{
     private func searchTextBinding(){
         $searchQuery
-            .debounce(for: .milliseconds(500), scheduler: DispatchQueue.main)
+            .debounce(for: .milliseconds(500), scheduler: DispatchQueue.main) // pause for 500 milsec before requesting
             .removeDuplicates()
             .sink { [weak self] query in
                 self?.search(query: query)
