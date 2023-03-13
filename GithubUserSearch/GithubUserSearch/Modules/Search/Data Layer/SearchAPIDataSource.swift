@@ -7,6 +7,7 @@
 
 import Foundation
 
+// Remote Data source. Fetch data from server, Decode the model and return it to the repository
 struct SearchAPIDataSource:SearchAPIDataSourceProtocol{
     
     @Inject

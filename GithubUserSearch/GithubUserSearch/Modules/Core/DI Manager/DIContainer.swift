@@ -6,6 +6,7 @@ protocol DIContainerProtocol {
     func resolve<Service>(type: Service.Type) -> Service
 }
 
+// Container to register and resolve dependencies
 final class DIContainer: DIContainerProtocol {
     
     static let shared = DIContainer()

@@ -7,6 +7,7 @@
 
 import Foundation
 
+// Generic Client that can be utilized by all the classes/structs that need to fetch data from remote location
 protocol APIClientProtocol{
     func getData(for request: URLRequest) async throws -> (Data, URLResponse)
 }

@@ -1,7 +1,9 @@
 
 import Foundation
 
+// This handles all the configs, properties, cases required for network calls
 struct APIManager{
+    
     enum CustomError:Error{
         case serviceNotFound
         case badURL

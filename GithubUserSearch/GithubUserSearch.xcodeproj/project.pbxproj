@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		060910C129BF9D070037CB0D /* SearchViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060910C029BF9D070037CB0D /* SearchViewData.swift */; };
 		0666A6A929BE6B0C00B106FE /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666A6A829BE6B0C00B106FE /* MainApp.swift */; };
 		0666A6AD29BE6B0E00B106FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0666A6AC29BE6B0E00B106FE /* Assets.xcassets */; };
 		0666A6B029BE6B0E00B106FE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0666A6AF29BE6B0E00B106FE /* Preview Assets.xcassets */; };
@@ -63,6 +64,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		060910C029BF9D070037CB0D /* SearchViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewData.swift; sourceTree = "<group>"; };
 		0666A6A529BE6B0C00B106FE /* GithubUserSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubUserSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0666A6A829BE6B0C00B106FE /* MainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApp.swift; sourceTree = "<group>"; };
 		0666A6AC29BE6B0E00B106FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -133,6 +135,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		060910BF29BF9CEC0037CB0D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				060910C029BF9D070037CB0D /* SearchViewData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		0666A69C29BE6B0C00B106FE = {
 			isa = PBXGroup;
 			children = (
@@ -361,6 +371,7 @@
 			children = (
 				0678926C29BF65520059B8E2 /* Views */,
 				0678925C29BF43630059B8E2 /* Contollers */,
+				060910BF29BF9CEC0037CB0D /* Model */,
 				0678928229BF8D950059B8E2 /* Router */,
 			);
 			path = "Presentation Layer";
@@ -627,6 +638,7 @@
 			files = (
 				0678927629BF66E70059B8E2 /* SearchViewConfigurator.swift in Sources */,
 				0666A6DC29BE6C7400B106FE /* SearchModel.swift in Sources */,
+				060910C129BF9D070037CB0D /* SearchViewData.swift in Sources */,
 				0678927129BF65FC0059B8E2 /* SearchResultView.swift in Sources */,
 				0666A6E629BE6F1900B106FE /* SearchContract.swift in Sources */,
 				0678928529BF8E490059B8E2 /* AppConstants.swift in Sources */,

@@ -19,7 +19,7 @@ protocol SearchUseCaseProtocol{
 }
 
 protocol SearchRepositoryProtocol{
-    func getData(by name:String) async-> Result<[SearchDTO],APIManager.CustomError>
+    func getData(by name:String, limit:Int) async-> Result<[SearchDTO],APIManager.CustomError>
 }
 
 protocol SearchAPIDataSourceProtocol{
