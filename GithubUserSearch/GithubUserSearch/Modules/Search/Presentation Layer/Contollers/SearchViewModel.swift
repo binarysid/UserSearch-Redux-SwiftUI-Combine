@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 
+// View Model Acts as a coordinator between view layer and business logic(Domain layer)
 final class SearchViewModel:SearchViewModelProtocol{
     @Inject
     private var searchUseCase: SearchUseCaseProtocol

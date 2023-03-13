@@ -13,6 +13,7 @@ struct SearchUseCase:SearchUseCaseProtocol {
     private var repository:SearchRepositoryProtocol
     
     func search(by name:String) async-> Result<[SearchDTO],APIManager.CustomError>{
+        
         let result = await repository.getData(by: name)
         return result
     }
