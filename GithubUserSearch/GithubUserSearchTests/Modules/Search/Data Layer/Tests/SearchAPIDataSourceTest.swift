@@ -19,12 +19,12 @@ final class SearchAPIDataSourceTest: XCTestCase {
         apiClient = MockAPIClient()
         DIContainer.shared.register(type: APIClientProtocol.self, component: apiClient!)
         dataSource = SearchAPIDataSource()
-        expectation = expectation(description: "Git user search expectation")
+        expectation = expectation(description: "Git user search data source test expectation")
     }
     func test_non_empty_data() async{
         do{
             try apiClient.setData(from: self.validSource)
-            let result = await dataSource.getSearchData(by: name)
+            let result = await dataSource.getSearchData(by: "")
             guard case .success(let data) = result else{
                 XCTFail("Search Data not found")
                 self.expectation.fulfill()
