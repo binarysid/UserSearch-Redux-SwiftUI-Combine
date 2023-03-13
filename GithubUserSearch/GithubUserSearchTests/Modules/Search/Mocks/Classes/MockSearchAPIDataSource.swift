@@ -8,7 +8,7 @@
 import Foundation
 @testable import GithubUserSearch
 
-struct MockSearchAPIClient:SearchAPIDataSourceProtocol{
+struct MockSearchAPIDataSource:SearchAPIDataSourceProtocol{
     var dataSource:String
     func getSearchData(by name: String) async -> Result<[GithubUserSearch.GitHubUser], GithubUserSearch.APIManager.CustomError> {
         let testBundle = Bundle(for: GithubUserSearchTests.self)
