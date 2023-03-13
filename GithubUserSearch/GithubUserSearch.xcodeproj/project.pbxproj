@@ -39,6 +39,7 @@
 		0678927429BF663E0059B8E2 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0678927329BF663E0059B8E2 /* SearchView.swift */; };
 		0678927629BF66E70059B8E2 /* SearchViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0678927529BF66E70059B8E2 /* SearchViewConfigurator.swift */; };
 		0678927A29BF6A950059B8E2 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0678927929BF6A950059B8E2 /* SearchRouter.swift */; };
+		0678928129BF8C5C0059B8E2 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0678928029BF8C5C0059B8E2 /* Config.swift */; };
 		067EFC8629BE8342009D6AAF /* MockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067EFC8529BE8342009D6AAF /* MockAPIClient.swift */; };
 		067EFC8A29BE83E1009D6AAF /* SearchAPIDataSourceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067EFC8929BE83E1009D6AAF /* SearchAPIDataSourceTest.swift */; };
 /* End PBXBuildFile section */
@@ -97,6 +98,10 @@
 		0678927329BF663E0059B8E2 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		0678927529BF66E70059B8E2 /* SearchViewConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewConfigurator.swift; sourceTree = "<group>"; };
 		0678927929BF6A950059B8E2 /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
+		0678927C29BF87240059B8E2 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		0678927D29BF87310059B8E2 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		0678927F29BF89730059B8E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		0678928029BF8C5C0059B8E2 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		067EFC8529BE8342009D6AAF /* MockAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIClient.swift; sourceTree = "<group>"; };
 		067EFC8929BE83E1009D6AAF /* SearchAPIDataSourceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAPIDataSourceTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,8 +156,10 @@
 			children = (
 				0666A6D229BE6BE300B106FE /* Modules */,
 				0666A6E829BE70C700B106FE /* Root */,
+				0678927B29BF87020059B8E2 /* ENV */,
 				0678927829BF68D30059B8E2 /* Resources */,
 				0666A6AE29BE6B0E00B106FE /* Preview Content */,
+				0678927F29BF89730059B8E2 /* Info.plist */,
 			);
 			path = GithubUserSearch;
 			sourceTree = "<group>";
@@ -216,7 +223,6 @@
 			children = (
 				0666A6F829BE73C900B106FE /* SearchRepository.swift */,
 				0666A6EE29BE718700B106FE /* SearchAPIDataSource.swift */,
-				0666A6E029BE6EB200B106FE /* APIManager.swift */,
 				0666A6DB29BE6C7400B106FE /* SearchModel.swift */,
 			);
 			path = "Data Layer";
@@ -244,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				0666A6A829BE6B0C00B106FE /* GithubUserSearchApp.swift */,
+				0678928029BF8C5C0059B8E2 /* Config.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -436,8 +443,8 @@
 		0678927729BF67670059B8E2 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				0678927E29BF88580059B8E2 /* AsyncServices */,
 				0666A6E929BE70E800B106FE /* DI Manager */,
-				0666A6FF29BE7EFA00B106FE /* APIClient.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -448,6 +455,24 @@
 				0666A6AC29BE6B0E00B106FE /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		0678927B29BF87020059B8E2 /* ENV */ = {
+			isa = PBXGroup;
+			children = (
+				0678927C29BF87240059B8E2 /* Debug.xcconfig */,
+				0678927D29BF87310059B8E2 /* Release.xcconfig */,
+			);
+			path = ENV;
+			sourceTree = "<group>";
+		};
+		0678927E29BF88580059B8E2 /* AsyncServices */ = {
+			isa = PBXGroup;
+			children = (
+				0666A6FF29BE7EFA00B106FE /* APIClient.swift */,
+				0666A6E029BE6EB200B106FE /* APIManager.swift */,
+			);
+			path = AsyncServices;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -598,6 +623,7 @@
 				0666A6DF29BE6DE800B106FE /* SearchDTO.swift in Sources */,
 				0666A6ED29BE70E800B106FE /* DIContainer.swift in Sources */,
 				0666A6E729BE6F1900B106FE /* ViewConfigurator.swift in Sources */,
+				0678928129BF8C5C0059B8E2 /* Config.swift in Sources */,
 				0678927A29BF6A950059B8E2 /* SearchRouter.swift in Sources */,
 				0666A70029BE7EFA00B106FE /* APIClient.swift in Sources */,
 			);
@@ -647,6 +673,7 @@
 /* Begin XCBuildConfiguration section */
 		0666A6C729BE6B0E00B106FE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0678927C29BF87240059B8E2 /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -695,7 +722,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -707,6 +734,7 @@
 		};
 		0666A6C829BE6B0E00B106FE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0678927D29BF87310059B8E2 /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -749,7 +777,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -770,6 +798,7 @@
 				DEVELOPMENT_TEAM = PFWDJTA42U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GithubUserSearch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -799,6 +828,7 @@
 				DEVELOPMENT_TEAM = PFWDJTA42U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GithubUserSearch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

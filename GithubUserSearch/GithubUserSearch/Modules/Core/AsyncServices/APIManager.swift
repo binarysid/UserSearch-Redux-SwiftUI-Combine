@@ -27,16 +27,16 @@ struct APIManager{
     }
     
     enum EndPoints{
-//        static let baseURL =  "https://" + Config.stringValue(forKey: "BASE_URL")
-        static let baseURL = "https://api.github.com/search/users"
-        static let token = "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"
+        static let baseURL =  "https://" + Config.stringValue(forKey: "BASE_URL")
+        static let token = Config.stringValue(forKey: "API_KEY")
         
         case Users(name:String)
         
         var request:URLRequest?{
             switch self{
             case .Users(let name):
-                return APIManager.getURLRequest(baseURL: EndPoints.baseURL,token:EndPoints.token, paramters: ["q":name])
+                let url = EndPoints.baseURL + "/search/users"
+                return APIManager.getURLRequest(baseURL: url,token:EndPoints.token, paramters: ["q":name])
             }
         }
     }
