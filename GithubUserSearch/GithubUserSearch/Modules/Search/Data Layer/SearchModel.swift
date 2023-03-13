@@ -22,20 +22,20 @@ struct GitHubResponse: Codable {
 struct GitHubUser: Codable {
     let login: String
     let id: Int
-    let avatarUrl: String
-    let reposUrl: String
-    let followersUrl: String
+    let avatarURL: String
+    let reposURL: String
+    let followersURL: String
     
     enum CodingKeys: String, CodingKey {
         case login, id
-        case avatarUrl = "avatar_url"
-        case reposUrl = "repos_url"
-        case followersUrl = "followers_url"
+        case avatarURL = "avatar_url"
+        case reposURL = "repos_url"
+        case followersURL = "followers_url"
     }
 }
 
 extension GitHubUser{
     func toDomainObj()->SearchDTO{
-        return SearchDTO(id: id, name: login, avatar: avatarUrl,repos:reposUrl,followers: followersUrl)
+        return SearchDTO(id: id, name: login, avatar: avatarURL,repos:reposURL,followers: followersURL)
     }
 }
