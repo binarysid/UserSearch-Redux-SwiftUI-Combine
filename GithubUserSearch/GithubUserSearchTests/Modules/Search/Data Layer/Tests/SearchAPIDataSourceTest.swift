@@ -24,7 +24,7 @@ final class SearchAPIDataSourceTest: XCTestCase {
     func test_non_empty_data() async{
         do{
             try apiClient.setData(from: self.validSource)
-            let result = await dataSource.getSearchData(by: "")
+            let result = await dataSource.getSearchData(by: "", limit: 10)
             guard case .success(let data) = result else{
                 XCTFail("Search Data not found")
                 self.expectation.fulfill()

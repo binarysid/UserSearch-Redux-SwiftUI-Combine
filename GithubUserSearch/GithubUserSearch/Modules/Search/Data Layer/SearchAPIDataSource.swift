@@ -8,13 +8,14 @@
 import Foundation
 
 // Remote Data source. Fetch data from server, Decode the model and return it to the repository
-struct SearchAPIDataSource:SearchAPIDataSourceProtocol{
-    
+struct SearchAPIDataSource{
     @Inject
     private var apiClient:APIClientProtocol
-    
-    func getSearchData(by name:String) async -> Result<[GitHubUser],APIManager.CustomError> {
-        guard let request = APIManager.EndPoints.userSearch(name: name).request else{
+}
+
+extension SearchAPIDataSource:SearchAPIDataSourceProtocol{
+    func getSearchData(by name:String, limit: Int) async -> Result<[GitHubUser],APIManager.CustomError> {
+        guard let request = APIManager.EndPoints.userSearch(name: name, limit: limit).request else{
             return .failure(.badURL)
         }
         do {

@@ -15,15 +15,15 @@ protocol SearchViewModelProtocol:ObservableObject{
 }
 
 protocol SearchUseCaseProtocol{
-    func search(by name:String) async-> Result<[SearchDTO],APIManager.CustomError>
+    func search(by name:String, limit: Int) async-> Result<[SearchDTO],APIManager.CustomError>
 }
 
 protocol SearchRepositoryProtocol{
-    func getData(by name:String, limit:Int) async-> Result<[SearchDTO],APIManager.CustomError>
+    func getData(by name:String, limit: Int) async-> Result<[SearchDTO],APIManager.CustomError>
 }
 
 protocol SearchAPIDataSourceProtocol{
-    func getSearchData(by name:String) async ->
+    func getSearchData(by name:String, limit: Int) async ->
     Result<[GitHubUser],APIManager.CustomError>
 }
 

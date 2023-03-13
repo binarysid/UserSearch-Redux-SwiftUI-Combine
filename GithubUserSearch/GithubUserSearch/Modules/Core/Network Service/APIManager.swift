@@ -28,13 +28,13 @@ struct APIManager{
         static let baseURL =  "https://" + Config.stringValue(forKey: "BASE_URL")
         static let token = Config.stringValue(forKey: "API_KEY")
         
-        case userSearch(name:String)
+        case userSearch(name:String, limit:Int)
         
         var request:URLRequest?{
             switch self{
-            case .userSearch(let name):
+            case .userSearch(let name, let limit):
                 let url = EndPoints.baseURL + "/search/users"
-                return APIManager.getURLRequest(baseURL: url,token:EndPoints.token, paramters: ["q":name])
+                return APIManager.getURLRequest(baseURL: url,token:EndPoints.token, paramters: ["q":name,"per_page":String(limit)])
             }
         }
     }

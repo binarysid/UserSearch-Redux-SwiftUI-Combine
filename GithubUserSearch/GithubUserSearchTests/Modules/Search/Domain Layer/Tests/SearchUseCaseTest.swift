@@ -20,7 +20,7 @@ final class SearchUseCaseTest: XCTestCase {
         expectation = expectation(description: "Git user search use case test expectation")
     }
     func test_usecase_valid_DTO() async{
-        let result = await searchUseCase.search(by: "")
+        let result = await searchUseCase.search(by: "", limit: 10)
         guard case .success(let data) = result else{
             XCTFail("No Data Found from use case")
             self.expectation.fulfill()

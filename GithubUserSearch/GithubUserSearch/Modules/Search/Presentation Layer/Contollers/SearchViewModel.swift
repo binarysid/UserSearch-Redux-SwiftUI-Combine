@@ -8,18 +8,23 @@
 import Foundation
 import Combine
 
-// View Model Acts as a coordinator between view layer and business logic(Domain layer)
-final class SearchViewModel:SearchViewModelProtocol{
+// ViewModel Acts as a coordinator between view layer and business logic(Domain layer) in order to manage presentation data for View.
+final class SearchViewModel{
     @Inject
     private var searchUseCase: SearchUseCaseProtocol
     @Published var searchQuery: String = ""
     @MainActor @Published var viewData:[SearchViewData] = []
     private var cancellables: Set<AnyCancellable> = []
     private var searchTask:Task<(), Never>? = nil
+    private let requestLimit = 10
+    private let debounceTime = 500
     
     init() {
         self.searchTextBinding()
     }
+}
+
+extension SearchViewModel:SearchViewModelProtocol{
     func cancelSearchTask(){
         searchTask?.cancel()
         searchTask = nil
@@ -30,7 +35,7 @@ final class SearchViewModel:SearchViewModelProtocol{
 extension SearchViewModel{
     private func searchTextBinding(){
         $searchQuery
-            .debounce(for: .milliseconds(500), scheduler: DispatchQueue.main) // pause for 500 milsec before requesting
+            .debounce(for: .milliseconds(debounceTime), scheduler: DispatchQueue.main) // pause for 500 milsec before requesting
             .removeDuplicates()
             .sink { [weak self] query in
                 self?.search(query: query)
@@ -46,7 +51,7 @@ extension SearchViewModel{
             if Task.isCancelled{ //if task is already cancelled we don't need to request
                 return
             }
-            let searchResults = await searchUseCase.search(by: query)
+            let searchResults = await searchUseCase.search(by: query, limit: requestLimit)
             guard case .success(let data) = searchResults else{
                 return
             }
