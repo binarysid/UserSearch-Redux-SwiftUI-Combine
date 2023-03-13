@@ -11,6 +11,7 @@ import Foundation
 protocol SearchViewModelProtocol:ObservableObject{
     var searchQuery: String{get set}
     var data:[SearchDTO]{get}
+    func cancelSearchTask()
 }
 protocol SearchUseCaseProtocol{
     func search(by name:String) async-> Result<[SearchDTO],APIManager.CustomError>

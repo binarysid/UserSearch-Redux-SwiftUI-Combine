@@ -14,24 +14,18 @@ final class SearchViewModel:SearchViewModelProtocol{
     @Published var searchQuery: String = ""
     @MainActor @Published var data:[SearchDTO] = []
     private var cancellables: Set<AnyCancellable> = []
-
+    private var searchTask:Task<(), Never>? = nil
+    
     init() {
         self.searchTextBinding()
     }
-
-    func search(query: String) {
-        Task {
-            let searchResults = await searchUseCase.search(by: query)
-            guard case .success(let data) = searchResults else{
-                return
-            }
-            await MainActor.run(body: {
-                self.data = data
-            })
-        }
+    func cancelSearchTask(){
+        searchTask?.cancel()
+        searchTask = nil
     }
 }
 
+// MARK: Search bindings & task
 extension SearchViewModel{
     private func searchTextBinding(){
         $searchQuery
@@ -41,5 +35,26 @@ extension SearchViewModel{
                 self?.search(query: query)
             }
             .store(in: &cancellables)
+    }
+    private func search(query: String) {
+        if isSearchTaskRunning() {cancelSearchTask()} //cancel the current running task before creating a new task
+        self.createSearchTask(by: query)
+    }
+    private func createSearchTask(by query: String){
+        searchTask = Task {
+            if Task.isCancelled{ //if task is already cancelled we don't need to request
+                return
+            }
+            let searchResults = await searchUseCase.search(by: query)
+            guard case .success(let data) = searchResults else{
+                return
+            }
+            await MainActor.run(body: { //update the data on main thread as this will be updating the view
+                self.data = data
+            })
+        }
+    }
+    private func isSearchTaskRunning()->Bool{
+        searchTask != nil
     }
 }
