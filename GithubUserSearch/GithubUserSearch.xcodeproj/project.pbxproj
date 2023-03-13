@@ -38,6 +38,7 @@
 		0678927129BF65FC0059B8E2 /* SearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0678926F29BF65FC0059B8E2 /* SearchResultView.swift */; };
 		0678927229BF65FC0059B8E2 /* SearchListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0678927029BF65FC0059B8E2 /* SearchListCell.swift */; };
 		0678927429BF663E0059B8E2 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0678927329BF663E0059B8E2 /* SearchView.swift */; };
+		0678927629BF66E70059B8E2 /* SearchViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0678927529BF66E70059B8E2 /* SearchViewConfigurator.swift */; };
 		067EFC8629BE8342009D6AAF /* MockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067EFC8529BE8342009D6AAF /* MockAPIClient.swift */; };
 		067EFC8A29BE83E1009D6AAF /* SearchAPIDataSourceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067EFC8929BE83E1009D6AAF /* SearchAPIDataSourceTest.swift */; };
 /* End PBXBuildFile section */
@@ -95,6 +96,7 @@
 		0678926F29BF65FC0059B8E2 /* SearchResultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultView.swift; sourceTree = "<group>"; };
 		0678927029BF65FC0059B8E2 /* SearchListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchListCell.swift; sourceTree = "<group>"; };
 		0678927329BF663E0059B8E2 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		0678927529BF66E70059B8E2 /* SearchViewConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewConfigurator.swift; sourceTree = "<group>"; };
 		067EFC8529BE8342009D6AAF /* MockAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIClient.swift; sourceTree = "<group>"; };
 		067EFC8929BE83E1009D6AAF /* SearchAPIDataSourceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAPIDataSourceTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -359,6 +361,7 @@
 			isa = PBXGroup;
 			children = (
 				0678925D29BF436F0059B8E2 /* SearchViewModel.swift */,
+				0678927529BF66E70059B8E2 /* SearchViewConfigurator.swift */,
 			);
 			path = Contollers;
 			sourceTree = "<group>";
@@ -562,6 +565,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0678927629BF66E70059B8E2 /* SearchViewConfigurator.swift in Sources */,
 				0666A6DC29BE6C7400B106FE /* SearchModel.swift in Sources */,
 				0678927129BF65FC0059B8E2 /* SearchResultView.swift in Sources */,
 				0666A6E629BE6F1900B106FE /* SearchContract.swift in Sources */,
