@@ -7,11 +7,25 @@
 
 import Foundation
 
-// all the contracts that builds the workflow View->ViewModel->UseCase->Repository->DataSource
-protocol SearchViewModelProtocol:ObservableObject{
+// All the contracts that builds the workflow View->ViewModel->UseCase->Repository->DataSource
+
+typealias SearchViewModelProtocol = SearchViewDataQueryProtocol & SearchViewTaskProtocol & SearchViewNavigatorProtocol
+
+protocol SearchViewDataQueryProtocol:ObservableObject{
     var searchQuery: String{get set}
     var viewData:[SearchViewData]{get}
+}
+
+protocol SearchViewNavigatorProtocol{
+    func navigateToDetail(reposURL:URL?,followersURL:URL?)
+}
+
+protocol SearchViewTaskProtocol{
     func cancelSearchTask()
+}
+
+protocol SearchRouterProtocol{
+    func presentDetailView(reposURL:URL,followersURL:URL?)
 }
 
 protocol SearchUseCaseProtocol{

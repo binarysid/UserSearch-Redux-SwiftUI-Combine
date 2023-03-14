@@ -24,5 +24,6 @@ extension SearchViewConfigurator{
         container.register(type: SearchAPIDataSourceProtocol.self, component: SearchAPIDataSource())
         container.register(type: SearchRepositoryProtocol.self, component: SearchRepository())
         container.register(type: SearchUseCaseProtocol.self, component: SearchUseCase())
+        container.register(type: SearchRouterProtocol.self, component: SearchRouter())
     }
 }

@@ -8,10 +8,12 @@
 import Foundation
 import Combine
 
-// ViewModel Acts as a coordinator between view layer and business logic(Domain layer) in order to manage presentation data for View.
+// ViewModel communicates with Domain layer in order to manage presentation data for View and handle Routing.
 final class SearchViewModel{
     @Inject
     private var searchUseCase: SearchUseCaseProtocol
+    @Inject
+    private var router: SearchRouterProtocol
     @Published var searchQuery: String = ""
     @MainActor @Published var viewData:[SearchViewData] = []
     private var cancellables: Set<AnyCancellable> = []
@@ -28,6 +30,12 @@ extension SearchViewModel:SearchViewModelProtocol{
     func cancelSearchTask(){
         searchTask?.cancel()
         searchTask = nil
+    }
+    func navigateToDetail(reposURL:URL?,followersURL:URL?){
+        guard let repositoryLink = reposURL else{ // for navigate to detail view repository url is mandatory
+            return
+        }
+        router.presentDetailView(reposURL: repositoryLink, followersURL: followersURL)
     }
 }
 
@@ -46,6 +54,7 @@ extension SearchViewModel{
         if isSearchTaskRunning() {cancelSearchTask()} //cancel the current running task before creating a new task
         self.createSearchTask(by: query)
     }
+    // requesting data from domain layer
     private func createSearchTask(by query: String){
         searchTask = Task {
             if Task.isCancelled{ //if task is already cancelled we don't need to request

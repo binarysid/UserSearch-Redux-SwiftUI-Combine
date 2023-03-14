@@ -9,7 +9,9 @@ import SwiftUI
 
 struct SearchListCell: View {
     
+    typealias Action = ()->Void
     @State var item: SearchViewData
+    var action:Action?
     
     var body: some View {
         HStack{
@@ -28,5 +30,10 @@ struct SearchListCell: View {
                 .padding(.leading,8)
         }
         .padding(16)
+        .onTapGesture {
+            if let action = action{
+                action()
+            }
+        }
     }
 }
