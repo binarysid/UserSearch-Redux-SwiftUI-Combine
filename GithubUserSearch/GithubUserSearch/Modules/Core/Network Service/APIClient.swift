@@ -11,7 +11,9 @@ import Foundation
 protocol APIClientProtocol{
     func getData(for request: URLRequest) async throws -> (Data, URLResponse)
 }
-struct APIClient:APIClientProtocol{
+
+// default implementation
+extension APIClientProtocol{
     func getData(for request: URLRequest) async throws -> (Data, URLResponse){
         do {
             let result = try await URLSession.shared.data(for: request)
@@ -20,4 +22,8 @@ struct APIClient:APIClientProtocol{
             throw error
         }
     }
+}
+
+struct APIClient:APIClientProtocol{
+
 }
