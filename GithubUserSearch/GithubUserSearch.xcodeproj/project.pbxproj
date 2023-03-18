@@ -25,7 +25,6 @@
 		0666A6F929BE73C900B106FE /* SearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666A6F829BE73C900B106FE /* SearchRepository.swift */; };
 		0666A6FB29BE757C00B106FE /* MockSearchAPIDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666A6FA29BE757C00B106FE /* MockSearchAPIDataSource.swift */; };
 		0666A6FE29BE77D500B106FE /* SearchRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666A6FD29BE77D500B106FE /* SearchRepositoryTest.swift */; };
-		0666A70029BE7EFA00B106FE /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666A6FF29BE7EFA00B106FE /* APIClient.swift */; };
 		0678925229BF3E010059B8E2 /* SearchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0678925129BF3E010059B8E2 /* SearchUseCase.swift */; };
 		0678925429BF3FB20059B8E2 /* SearchUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0678925329BF3FB20059B8E2 /* SearchUseCaseTest.swift */; };
 		0678925A29BF404A0059B8E2 /* MockSearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0678925929BF404A0059B8E2 /* MockSearchRepository.swift */; };
@@ -43,6 +42,7 @@
 		0678928529BF8E490059B8E2 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0678928429BF8E490059B8E2 /* AppConstants.swift */; };
 		067EFC8629BE8342009D6AAF /* MockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067EFC8529BE8342009D6AAF /* MockAPIClient.swift */; };
 		067EFC8A29BE83E1009D6AAF /* SearchAPIDataSourceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067EFC8929BE83E1009D6AAF /* SearchAPIDataSourceTest.swift */; };
+		068C0B6D29C5A77700A8C1AB /* WebService in Frameworks */ = {isa = PBXBuildFile; productRef = 068C0B6C29C5A77700A8C1AB /* WebService */; };
 		06FA209129C065D80088187E /* GithubUserSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FA209029C065D80088187E /* GithubUserSearchTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -86,7 +86,6 @@
 		0666A6FA29BE757C00B106FE /* MockSearchAPIDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchAPIDataSource.swift; sourceTree = "<group>"; };
 		0666A6FC29BE772F00B106FE /* @Mock-Empty-GitUsers.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "@Mock-Empty-GitUsers.json"; sourceTree = "<group>"; };
 		0666A6FD29BE77D500B106FE /* SearchRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepositoryTest.swift; sourceTree = "<group>"; };
-		0666A6FF29BE7EFA00B106FE /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		0678925129BF3E010059B8E2 /* SearchUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchUseCase.swift; sourceTree = "<group>"; };
 		0678925329BF3FB20059B8E2 /* SearchUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUseCaseTest.swift; sourceTree = "<group>"; };
 		0678925929BF404A0059B8E2 /* MockSearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchRepository.swift; sourceTree = "<group>"; };
@@ -115,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				068C0B6D29C5A77700A8C1AB /* WebService in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,7 +483,6 @@
 		0678927E29BF88580059B8E2 /* Network Service */ = {
 			isa = PBXGroup;
 			children = (
-				0666A6FF29BE7EFA00B106FE /* APIClient.swift */,
 				0666A6E029BE6EB200B106FE /* APIManager.swift */,
 			);
 			path = "Network Service";
@@ -521,6 +520,9 @@
 			dependencies = (
 			);
 			name = GithubUserSearch;
+			packageProductDependencies = (
+				068C0B6C29C5A77700A8C1AB /* WebService */,
+			);
 			productName = GithubUserSearch;
 			productReference = 0666A6A529BE6B0C00B106FE /* GithubUserSearch.app */;
 			productType = "com.apple.product-type.application";
@@ -593,6 +595,9 @@
 				Base,
 			);
 			mainGroup = 0666A69C29BE6B0C00B106FE;
+			packageReferences = (
+				068C0B6B29C5A77700A8C1AB /* XCRemoteSwiftPackageReference "WebService" */,
+			);
 			productRefGroup = 0666A6A629BE6B0C00B106FE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -657,7 +662,6 @@
 				0666A6E729BE6F1900B106FE /* ViewConfigurator.swift in Sources */,
 				0678928129BF8C5C0059B8E2 /* Config.swift in Sources */,
 				0678927A29BF6A950059B8E2 /* SearchRouter.swift in Sources */,
-				0666A70029BE7EFA00B106FE /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -995,6 +999,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		068C0B6B29C5A77700A8C1AB /* XCRemoteSwiftPackageReference "WebService" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/binarysid/WebService.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		068C0B6C29C5A77700A8C1AB /* WebService */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 068C0B6B29C5A77700A8C1AB /* XCRemoteSwiftPackageReference "WebService" */;
+			productName = WebService;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0666A69D29BE6B0C00B106FE /* Project object */;
 }

@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import WebService
 @testable import GithubUserSearch
 
-final class MockAPIClient:APIClientProtocol{
+final class MockAPIClient:WebServiceProtocol{
     private var data: Data?
     private var error: Error?
     let testBundle = Bundle(for: GithubUserSearchTests.self)

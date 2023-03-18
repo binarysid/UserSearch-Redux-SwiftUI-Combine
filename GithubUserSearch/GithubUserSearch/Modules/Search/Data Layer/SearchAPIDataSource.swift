@@ -6,11 +6,12 @@
 //
 
 import Foundation
+import WebService //the package has been created by this author to make it reusable for every projects
 
 // Remote Data source. Fetch data from server, Decode the model and return it to the repository
 struct SearchAPIDataSource{
     @Inject
-    private var apiClient:APIClientProtocol
+    private var apiClient:WebServiceProtocol
 }
 
 extension SearchAPIDataSource:SearchAPIDataSourceProtocol{

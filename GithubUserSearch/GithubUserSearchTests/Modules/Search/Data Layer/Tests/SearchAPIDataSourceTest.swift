@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import WebService
 @testable import GithubUserSearch
 
 final class SearchAPIDataSourceTest: XCTestCase {
@@ -17,7 +18,7 @@ final class SearchAPIDataSourceTest: XCTestCase {
     
     override func setUp() {
         apiClient = MockAPIClient()
-        DIContainer.shared.register(type: APIClientProtocol.self, component: apiClient!)
+        DIContainer.shared.register(type: WebServiceProtocol.self, component: apiClient!)
         dataSource = SearchAPIDataSource()
         expectation = expectation(description: "Git user search data source test expectation")
     }
