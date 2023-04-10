@@ -20,7 +20,7 @@ struct SearchView<T:SearchViewModelProtocol>: View {
             }
             .environmentObject(viewModel)
         }
-        .navigationBarTitle(Text(AppConstants.Common.Title.main))
+        .navigationBarTitle(Text(viewModel.getAppTitle()))
         .onDisappear{
             viewModel.cancelSearchTask()
         }

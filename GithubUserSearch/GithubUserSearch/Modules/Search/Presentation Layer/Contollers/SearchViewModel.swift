@@ -37,6 +37,9 @@ extension SearchViewModel:SearchViewModelProtocol{
         }
         router.presentDetailView(reposURL: repositoryLink, followersURL: followersURL)
     }
+    func getAppTitle()->String{
+        AppConstants.Common.Title.main
+    }
 }
 
 // MARK: Search bindings & task

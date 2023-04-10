@@ -14,6 +14,7 @@ typealias SearchViewModelProtocol = SearchViewDataQueryProtocol & SearchViewTask
 protocol SearchViewDataQueryProtocol:ObservableObject{
     var searchQuery: String{get set}
     var viewData:[SearchViewData]{get}
+    func getAppTitle()->String
 }
 
 protocol SearchViewNavigatorProtocol{
