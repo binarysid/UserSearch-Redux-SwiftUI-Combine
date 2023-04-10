@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct SearchView<T:SearchViewModelProtocol>: View {
-    
+struct SearchView<T: SearchViewModelProtocol>: View {
+
     @ObservedObject var viewModel: T
 
     var body: some View {
-        NavigationView{
+        NavigationView {
             VStack {
                 SearchBar(text: $viewModel.searchQuery)
                     .padding(.top)
@@ -21,14 +21,14 @@ struct SearchView<T:SearchViewModelProtocol>: View {
             .environmentObject(viewModel)
         }
         .navigationBarTitle(Text(viewModel.getAppTitle()))
-        .onDisappear{
+        .onDisappear {
             viewModel.cancelSearchTask()
         }
     }
 }
 
-//struct ContentView_Previews: PreviewProvider {
+// struct ContentView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        ContentView()
 //    }
-//}
+// }

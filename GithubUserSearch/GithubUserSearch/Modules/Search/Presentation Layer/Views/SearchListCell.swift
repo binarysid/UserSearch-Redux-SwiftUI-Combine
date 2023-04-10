@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct SearchListCell: View {
-    
-    typealias Action = ()->Void
+
+    typealias Action = () -> Void
     @State var item: SearchViewData
-    var action:Action?
-    
+    var action: Action?
+
     var body: some View {
-        HStack{
+        HStack {
             AsyncImage(url: item.avatar
                        , content: { image in
                 image.resizable()
@@ -24,14 +24,14 @@ struct SearchListCell: View {
             }, placeholder: {
                 ProgressView()
             })
-            .padding(.leading,8)
-            
+            .padding(.leading, 8)
+
             Text(item.name)
-                .padding(.leading,8)
+                .padding(.leading, 8)
         }
         .padding(16)
         .onTapGesture {
-            if let action = action{
+            if let action = action {
                 action()
             }
         }

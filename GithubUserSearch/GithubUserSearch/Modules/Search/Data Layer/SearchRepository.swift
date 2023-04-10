@@ -8,16 +8,16 @@
 import Foundation
 
 // Connects with data source(local/remote) to return the data back to it's requestor. it basically returns DTO
-struct SearchRepository{
+struct SearchRepository {
     @Inject
-    private var dataSource:SearchAPIDataSourceProtocol
+    private var dataSource: SearchAPIDataSourceProtocol
 }
 
-extension SearchRepository:SearchRepositoryProtocol{
-    func getData(by name:String, limit: Int) async-> Result<[SearchDTO],APIManager.CustomError>{
-        
+extension SearchRepository: SearchRepositoryProtocol {
+    func getData(by name: String, limit: Int) async -> Result<[SearchDTO], NetworkError> {
+
         let result = await dataSource.getSearchData(by: name, limit: limit)
-        guard case .success(let data) = result else{
+        guard case .success(let data) = result else {
             return .failure(.serviceNotFound)
         }
         let users = self.mapToDTO(data: data)
@@ -26,9 +26,8 @@ extension SearchRepository:SearchRepositoryProtocol{
 }
 
 // MARK: DTO Mapping
-extension SearchRepository{
-    func mapToDTO(data:[GitHubUser])->[SearchDTO]{
-        data.map{ $0.toDomainObj() }
+extension SearchRepository {
+    func mapToDTO(data: [GitHubUser]) -> [SearchDTO] {
+        data.map { $0.toDomainObj() }
     }
 }
-

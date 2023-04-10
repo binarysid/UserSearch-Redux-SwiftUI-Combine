@@ -15,7 +15,7 @@
 		0666A6C629BE6B0E00B106FE /* GithubUserSearchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666A6C529BE6B0E00B106FE /* GithubUserSearchUITestsLaunchTests.swift */; };
 		0666A6DC29BE6C7400B106FE /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666A6DB29BE6C7400B106FE /* SearchModel.swift */; };
 		0666A6DF29BE6DE800B106FE /* SearchDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666A6DE29BE6DE800B106FE /* SearchDTO.swift */; };
-		0666A6E129BE6EB200B106FE /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666A6E029BE6EB200B106FE /* APIManager.swift */; };
+		0666A6E129BE6EB200B106FE /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666A6E029BE6EB200B106FE /* RequestManager.swift */; };
 		0666A6E629BE6F1900B106FE /* SearchContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666A6E429BE6F1800B106FE /* SearchContract.swift */; };
 		0666A6E729BE6F1900B106FE /* ViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666A6E529BE6F1800B106FE /* ViewConfigurator.swift */; };
 		0666A6EC29BE70E800B106FE /* Injector+Wrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666A6EA29BE70E800B106FE /* Injector+Wrapper.swift */; };
@@ -25,6 +25,7 @@
 		0666A6F929BE73C900B106FE /* SearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666A6F829BE73C900B106FE /* SearchRepository.swift */; };
 		0666A6FB29BE757C00B106FE /* MockSearchAPIDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666A6FA29BE757C00B106FE /* MockSearchAPIDataSource.swift */; };
 		0666A6FE29BE77D500B106FE /* SearchRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666A6FD29BE77D500B106FE /* SearchRepositoryTest.swift */; };
+		0675058829C8DE9D000125D1 /* WebService in Frameworks */ = {isa = PBXBuildFile; productRef = 0675058729C8DE9D000125D1 /* WebService */; };
 		0678925229BF3E010059B8E2 /* SearchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0678925129BF3E010059B8E2 /* SearchUseCase.swift */; };
 		0678925429BF3FB20059B8E2 /* SearchUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0678925329BF3FB20059B8E2 /* SearchUseCaseTest.swift */; };
 		0678925A29BF404A0059B8E2 /* MockSearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0678925929BF404A0059B8E2 /* MockSearchRepository.swift */; };
@@ -39,10 +40,12 @@
 		0678927629BF66E70059B8E2 /* SearchViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0678927529BF66E70059B8E2 /* SearchViewConfigurator.swift */; };
 		0678927A29BF6A950059B8E2 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0678927929BF6A950059B8E2 /* SearchRouter.swift */; };
 		0678928129BF8C5C0059B8E2 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0678928029BF8C5C0059B8E2 /* Config.swift */; };
-		0678928529BF8E490059B8E2 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0678928429BF8E490059B8E2 /* AppConstants.swift */; };
+		0678928529BF8E490059B8E2 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0678928429BF8E490059B8E2 /* GlobalConstants.swift */; };
 		067EFC8629BE8342009D6AAF /* MockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067EFC8529BE8342009D6AAF /* MockAPIClient.swift */; };
 		067EFC8A29BE83E1009D6AAF /* SearchAPIDataSourceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067EFC8929BE83E1009D6AAF /* SearchAPIDataSourceTest.swift */; };
-		068C0B6D29C5A77700A8C1AB /* WebService in Frameworks */ = {isa = PBXBuildFile; productRef = 068C0B6C29C5A77700A8C1AB /* WebService */; };
+		068F994C29CB8C8200B21D2E /* SearchViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068F994B29CB8C8200B21D2E /* SearchViewConstants.swift */; };
+		068F994E29CCC2E800B21D2E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068F994D29CCC2E800B21D2E /* NetworkError.swift */; };
+		068F995029CCC3C900B21D2E /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068F994F29CCC3C900B21D2E /* EndPoints.swift */; };
 		06FA209129C065D80088187E /* GithubUserSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FA209029C065D80088187E /* GithubUserSearchTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -75,7 +78,7 @@
 		0666A6C529BE6B0E00B106FE /* GithubUserSearchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUserSearchUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0666A6DB29BE6C7400B106FE /* SearchModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
 		0666A6DE29BE6DE800B106FE /* SearchDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDTO.swift; sourceTree = "<group>"; };
-		0666A6E029BE6EB200B106FE /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		0666A6E029BE6EB200B106FE /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		0666A6E429BE6F1800B106FE /* SearchContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchContract.swift; sourceTree = "<group>"; };
 		0666A6E529BE6F1800B106FE /* ViewConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewConfigurator.swift; sourceTree = "<group>"; };
 		0666A6EA29BE70E800B106FE /* Injector+Wrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Injector+Wrapper.swift"; sourceTree = "<group>"; };
@@ -103,9 +106,12 @@
 		0678927D29BF87310059B8E2 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		0678927F29BF89730059B8E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0678928029BF8C5C0059B8E2 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
-		0678928429BF8E490059B8E2 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		0678928429BF8E490059B8E2 /* GlobalConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
 		067EFC8529BE8342009D6AAF /* MockAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIClient.swift; sourceTree = "<group>"; };
 		067EFC8929BE83E1009D6AAF /* SearchAPIDataSourceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAPIDataSourceTest.swift; sourceTree = "<group>"; };
+		068F994B29CB8C8200B21D2E /* SearchViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewConstants.swift; sourceTree = "<group>"; };
+		068F994D29CCC2E800B21D2E /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		068F994F29CCC3C900B21D2E /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
 		06FA209029C065D80088187E /* GithubUserSearchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubUserSearchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,7 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				068C0B6D29C5A77700A8C1AB /* WebService in Frameworks */,
+				0675058829C8DE9D000125D1 /* WebService in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +456,7 @@
 				0678927029BF65FC0059B8E2 /* SearchListCell.swift */,
 				0678926F29BF65FC0059B8E2 /* SearchResultView.swift */,
 				0678926D29BF65860059B8E2 /* SearchBar.swift */,
+				068F994B29CB8C8200B21D2E /* SearchViewConstants.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -483,7 +490,9 @@
 		0678927E29BF88580059B8E2 /* Network Service */ = {
 			isa = PBXGroup;
 			children = (
-				0666A6E029BE6EB200B106FE /* APIManager.swift */,
+				0666A6E029BE6EB200B106FE /* RequestManager.swift */,
+				068F994D29CCC2E800B21D2E /* NetworkError.swift */,
+				068F994F29CCC3C900B21D2E /* EndPoints.swift */,
 			);
 			path = "Network Service";
 			sourceTree = "<group>";
@@ -499,7 +508,7 @@
 		0678928329BF8DF00059B8E2 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				0678928429BF8E490059B8E2 /* AppConstants.swift */,
+				0678928429BF8E490059B8E2 /* GlobalConstants.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -514,6 +523,7 @@
 				0666A6A129BE6B0C00B106FE /* Sources */,
 				0666A6A229BE6B0C00B106FE /* Frameworks */,
 				0666A6A329BE6B0C00B106FE /* Resources */,
+				06C71A2A29CB715D00D088CC /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -521,7 +531,7 @@
 			);
 			name = GithubUserSearch;
 			packageProductDependencies = (
-				068C0B6C29C5A77700A8C1AB /* WebService */,
+				0675058729C8DE9D000125D1 /* WebService */,
 			);
 			productName = GithubUserSearch;
 			productReference = 0666A6A529BE6B0C00B106FE /* GithubUserSearch.app */;
@@ -596,7 +606,7 @@
 			);
 			mainGroup = 0666A69C29BE6B0C00B106FE;
 			packageReferences = (
-				068C0B6B29C5A77700A8C1AB /* XCRemoteSwiftPackageReference "WebService" */,
+				0675058629C8DE9D000125D1 /* XCRemoteSwiftPackageReference "WebService" */,
 			);
 			productRefGroup = 0666A6A629BE6B0C00B106FE /* Products */;
 			projectDirPath = "";
@@ -636,6 +646,28 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		06C71A2A29CB715D00D088CC /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0666A6A129BE6B0C00B106FE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -643,16 +675,18 @@
 			files = (
 				0678927629BF66E70059B8E2 /* SearchViewConfigurator.swift in Sources */,
 				0666A6DC29BE6C7400B106FE /* SearchModel.swift in Sources */,
+				068F994E29CCC2E800B21D2E /* NetworkError.swift in Sources */,
 				060910C129BF9D070037CB0D /* SearchViewData.swift in Sources */,
 				0678927129BF65FC0059B8E2 /* SearchResultView.swift in Sources */,
 				0666A6E629BE6F1900B106FE /* SearchContract.swift in Sources */,
-				0678928529BF8E490059B8E2 /* AppConstants.swift in Sources */,
+				0678928529BF8E490059B8E2 /* GlobalConstants.swift in Sources */,
 				0678926E29BF65860059B8E2 /* SearchBar.swift in Sources */,
 				0678927229BF65FC0059B8E2 /* SearchListCell.swift in Sources */,
+				068F994C29CB8C8200B21D2E /* SearchViewConstants.swift in Sources */,
 				0666A6F929BE73C900B106FE /* SearchRepository.swift in Sources */,
 				0678925229BF3E010059B8E2 /* SearchUseCase.swift in Sources */,
 				0666A6EC29BE70E800B106FE /* Injector+Wrapper.swift in Sources */,
-				0666A6E129BE6EB200B106FE /* APIManager.swift in Sources */,
+				0666A6E129BE6EB200B106FE /* RequestManager.swift in Sources */,
 				0678927429BF663E0059B8E2 /* SearchView.swift in Sources */,
 				0666A6EF29BE718700B106FE /* SearchAPIDataSource.swift in Sources */,
 				0678925E29BF436F0059B8E2 /* SearchViewModel.swift in Sources */,
@@ -661,6 +695,7 @@
 				0666A6ED29BE70E800B106FE /* DIContainer.swift in Sources */,
 				0666A6E729BE6F1900B106FE /* ViewConfigurator.swift in Sources */,
 				0678928129BF8C5C0059B8E2 /* Config.swift in Sources */,
+				068F995029CCC3C900B21D2E /* EndPoints.swift in Sources */,
 				0678927A29BF6A950059B8E2 /* SearchRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1001,20 +1036,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		068C0B6B29C5A77700A8C1AB /* XCRemoteSwiftPackageReference "WebService" */ = {
+		0675058629C8DE9D000125D1 /* XCRemoteSwiftPackageReference "WebService" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/binarysid/WebService.git";
+			repositoryURL = "https://github.com/binarysid/WebService/";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		068C0B6C29C5A77700A8C1AB /* WebService */ = {
+		0675058729C8DE9D000125D1 /* WebService */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 068C0B6B29C5A77700A8C1AB /* XCRemoteSwiftPackageReference "WebService" */;
+			package = 0675058629C8DE9D000125D1 /* XCRemoteSwiftPackageReference "WebService" */;
 			productName = WebService;
 		};
 /* End XCSwiftPackageProductDependency section */

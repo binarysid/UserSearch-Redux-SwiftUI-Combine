@@ -9,7 +9,7 @@ import Foundation
 @testable import GithubUserSearch
 
 final class MockSearchRepository:SearchRepositoryProtocol{
-    func getData(by name: String, limit: Int) async -> Result<[GithubUserSearch.SearchDTO], GithubUserSearch.APIManager.CustomError> {
+    func getData(by name: String, limit: Int) async -> Result<[GithubUserSearch.SearchDTO], GithubUserSearch.RequestManager.CustomError> {
         return .success(SearchDTOMock)
     }
 }

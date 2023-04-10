@@ -1,5 +1,7 @@
 import Foundation
-swiftlint:disable force_cast
+
+// swiftlint:disable force_cast
+
 protocol DIContainerProtocol {
     func register<Service>(type: Service.Type, component: Any)
     func resolve<Service>(type: Service.Type) -> Service

@@ -11,7 +11,7 @@ struct GitHubResponse: Codable {
     let totalCount: Int?
     let incompleteResults: Bool?
     let items: [GitHubUser]
-    
+
     enum CodingKeys: String, CodingKey {
         case totalCount = "total_count"
         case incompleteResults = "incomplete_results"
@@ -25,7 +25,7 @@ struct GitHubUser: Codable {
     let avatarURL: String
     let reposURL: String
     let followersURL: String
-    
+
     enum CodingKeys: String, CodingKey {
         case login, id
         case avatarURL = "avatar_url"
@@ -34,8 +34,8 @@ struct GitHubUser: Codable {
     }
 }
 
-extension GitHubUser{
-    func toDomainObj()->SearchDTO{
-        return SearchDTO(id: id, name: login, avatar: avatarURL,repos:reposURL,followers: followersURL)
+extension GitHubUser {
+    func toDomainObj() -> SearchDTO {
+        return SearchDTO(id: id, name: login, avatar: avatarURL, repos: reposURL, followers: followersURL)
     }
 }

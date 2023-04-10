@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct SearchBar: View {
-    
+
     @Binding var text: String
     @State private var isEditing = false
-    
+
     var body: some View {
         HStack {
             searchTextField()
@@ -23,20 +23,22 @@ struct SearchBar: View {
 }
 
 // MARK: View Components
-extension SearchBar{
-    private func cancelActionButton()->some View{
+extension SearchBar {
+
+    private func cancelActionButton() -> some View {
         Button(action: {
             self.isEditing = false
             self.text = ""
-            
+
         }) {
-            Text(AppConstants.Search.ActionTitle.cancel)
+            Text(SearchViewConstants.ActionTitle.cancel)
         }
         .padding(.trailing, 10)
         .transition(.move(edge: .trailing))
     }
-    private func searchTextField()->some View{
-        TextField(AppConstants.Common.Title.searchBar, text: $text)
+
+    private func searchTextField() -> some View {
+        TextField(GlobalConstants.Title.searchBar, text: $text)
             .padding(7)
             .padding(.horizontal, 25)
             .background(Color(.systemGray6))
@@ -47,18 +49,19 @@ extension SearchBar{
                 self.isEditing = true
             }
     }
-    private func overlayStyle()->some View{
+
+    private func overlayStyle() -> some View {
         HStack {
-            Image(systemName: AppConstants.Common.Images.magnifyingGlass)
+            Image(systemName: GlobalConstants.Images.magnifyingGlass)
                 .foregroundColor(.gray)
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 .padding(.leading, 8)
-            
+
             if isEditing {
                 Button(action: {
                     self.text = ""
                 }) {
-                    Image(systemName: AppConstants.Common.Images.circleFill)
+                    Image(systemName: GlobalConstants.Images.circleFill)
                         .foregroundColor(.gray)
                         .padding(.trailing, 8)
                 }

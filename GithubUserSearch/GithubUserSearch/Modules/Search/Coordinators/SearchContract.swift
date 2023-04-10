@@ -11,34 +11,32 @@ import Foundation
 
 typealias SearchViewModelProtocol = SearchViewDataQueryProtocol & SearchViewTaskProtocol & SearchViewNavigatorProtocol
 
-protocol SearchViewDataQueryProtocol:ObservableObject{
-    var searchQuery: String{get set}
-    var viewData:[SearchViewData]{get}
-    func getAppTitle()->String
+protocol SearchViewDataQueryProtocol: ObservableObject {
+    var searchQuery: String {get set}
+    var viewData: [SearchViewData] {get}
+    func getAppTitle() -> String
 }
 
-protocol SearchViewNavigatorProtocol{
-    func navigateToDetail(reposURL:URL?,followersURL:URL?)
+protocol SearchViewNavigatorProtocol {
+    func navigateToDetail(reposURL: URL?, followersURL: URL?)
 }
 
-protocol SearchViewTaskProtocol{
+protocol SearchViewTaskProtocol {
     func cancelSearchTask()
 }
 
-protocol SearchRouterProtocol{
-    func presentDetailView(reposURL:URL,followersURL:URL?)
+protocol SearchRouterProtocol {
+    func presentDetailView(reposURL: URL, followersURL: URL?)
 }
 
-protocol SearchUseCaseProtocol{
-    func search(by name:String, limit: Int) async-> Result<[SearchDTO],APIManager.CustomError>
+protocol SearchUseCaseProtocol {
+    func search(by name: String, limit: Int) async -> Result<[SearchDTO], NetworkError>
 }
 
-protocol SearchRepositoryProtocol{
-    func getData(by name:String, limit: Int) async-> Result<[SearchDTO],APIManager.CustomError>
+protocol SearchRepositoryProtocol {
+    func getData(by name: String, limit: Int) async -> Result<[SearchDTO], NetworkError>
 }
 
-protocol SearchAPIDataSourceProtocol{
-    func getSearchData(by name:String, limit: Int) async ->
-    Result<[GitHubUser],APIManager.CustomError>
+protocol SearchAPIDataSourceProtocol {
+    func getSearchData(by name: String, limit: Int) async -> Result<[GitHubUser], NetworkError>
 }
-

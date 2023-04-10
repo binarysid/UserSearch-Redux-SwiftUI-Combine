@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct SearchResultsView<T:SearchViewModelProtocol>: View {
+struct SearchResultsView<T: SearchViewModelProtocol>: View {
     @EnvironmentObject var viewModel: T
     var data: [SearchViewData] = []
-    
+
     var body: some View {
         List(data) { result in
-            SearchListCell(item: result){
+            SearchListCell(item: result) {
                 viewModel.navigateToDetail(reposURL: result.repos, followersURL: result.followers)
             }
         }

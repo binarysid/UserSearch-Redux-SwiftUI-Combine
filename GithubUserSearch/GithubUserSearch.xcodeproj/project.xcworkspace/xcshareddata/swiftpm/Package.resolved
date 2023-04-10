@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/binarysid/WebService.git",
       "state" : {
-        "branch" : "main",
-        "revision" : "a6ff6619b5740cd4df333ad111e8e48d7f1d69dd"
+        "revision" : "a6ff6619b5740cd4df333ad111e8e48d7f1d69dd",
+        "version" : "1.0.0"
       }
     }
   ],

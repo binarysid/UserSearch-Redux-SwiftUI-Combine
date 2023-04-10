@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct SearchViewData:Identifiable,Hashable{
-    var id:Int
-    var name:String
-    var avatar:URL?
-    var repos:URL?
-    var followers:URL?
+struct SearchViewData: Identifiable, Hashable {
+    var id: Int
+    var name: String
+    var avatar: URL?
+    var repos: URL?
+    var followers: URL?
 }

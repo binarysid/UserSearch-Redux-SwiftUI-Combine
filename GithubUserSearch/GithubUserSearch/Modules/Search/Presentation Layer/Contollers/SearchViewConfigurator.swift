@@ -7,8 +7,10 @@
 
 import SwiftUI
 import WebService
-// This configurator builds the Search View along with all it's dependencies required to perform all search related tasks
-struct SearchViewConfigurator: ViewConfiguratorProtocol{
+// This configurator builds
+// the Search View along with all it's dependencies
+// required to perform all search related tasks
+struct SearchViewConfigurator: ViewConfiguratorProtocol {
     func configure() -> some View {
         self.registerDependency()
         let viewModel = SearchViewModel()
@@ -17,8 +19,8 @@ struct SearchViewConfigurator: ViewConfiguratorProtocol{
 }
 
 // MARK: Dependency Registration
-extension SearchViewConfigurator{
-    private func registerDependency(){
+extension SearchViewConfigurator {
+    private func registerDependency() {
         let container = DIContainer.shared
         container.register(type: WebServiceProtocol.self, component: WebService())
         container.register(type: SearchAPIDataSourceProtocol.self, component: SearchAPIDataSource())

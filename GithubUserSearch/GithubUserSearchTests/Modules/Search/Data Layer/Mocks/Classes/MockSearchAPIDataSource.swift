@@ -13,7 +13,7 @@ final class MockSearchAPIDataSource:SearchAPIDataSourceProtocol{
     init(dataSource: String) {
         self.dataSource = dataSource
     }
-    func getSearchData(by name: String, limit:Int) async -> Result<[GithubUserSearch.GitHubUser], GithubUserSearch.APIManager.CustomError> {
+    func getSearchData(by name: String, limit:Int) async -> Result<[GithubUserSearch.GitHubUser], NetworkError> {
         let testBundle = Bundle(for: GithubUserSearchTests.self)
         guard let url =
                 testBundle.url(forResource:dataSource,withExtension:"json") else{

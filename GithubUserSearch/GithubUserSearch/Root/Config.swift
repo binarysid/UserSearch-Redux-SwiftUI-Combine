@@ -8,11 +8,11 @@
 import Foundation
 
 enum Config {
-    
+
     enum Error: Swift.Error {
         case missingKey, invalidValue
     }
-    
+
     static func stringValue(forKey key: String) -> String {
         guard let value = Bundle.main.infoDictionary?[key] as? String
         else {

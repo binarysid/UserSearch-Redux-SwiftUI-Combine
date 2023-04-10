@@ -3,7 +3,7 @@ import Foundation
 // This handles all the configs, properties, cases required for network calls
 struct RequestManager {
 
-    static func getURLRequest(baseURL: String, token: String, queryParams: [String: String], headers: [String: String]?) -> URLRequest? {
+    static func getURLRequest(baseURL: String, queryParams: [String: String], headers: [String: String]?) -> URLRequest? {
 
         guard var urlComponents = URLComponents(string: baseURL) else {
             return nil

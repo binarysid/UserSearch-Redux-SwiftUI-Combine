@@ -7,11 +7,10 @@
 
 import Foundation
 
-struct SearchDTO{
-    var id:Int
-    var name:String
-    var avatar:String?
-    var repos:String?
+struct SearchDTO {
+    var id: Int
+    var name: String
+    var avatar: String?
+    var repos: String?
     let followers: String?
 }
-
