@@ -1,0 +1,9 @@
+//
+//  Debug.xcconfig
+//  GithubUserSearch
+//
+//  Created by Linkon Sid on 13/3/23.
+//
+
+BASE_URL = api.github.com
+API_KEY = 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
