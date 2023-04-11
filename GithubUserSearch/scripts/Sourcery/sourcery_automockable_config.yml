@@ -1,0 +1,9 @@
+sources:
+  - ../../GithubUserSearch
+templates:
+  - templates/AutoMockable.stencil
+output:
+  ../../GithubUserSearchTests/Modules/Mocks/Mocks+Generated.swift
+args:
+  autoMockableTestableImports: ["GithubUserSearch"]
+  autoMockableImports: []
