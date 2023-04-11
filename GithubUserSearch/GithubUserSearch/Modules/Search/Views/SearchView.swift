@@ -6,24 +6,24 @@
 //
 
 import SwiftUI
+import Combine
 
-struct SearchView<T: SearchViewModelProtocol>: View {
+struct SearchView: View {
 
-    @ObservedObject var viewModel: T
+    @EnvironmentObject var viewModel: SearchViewModel
 
     var body: some View {
         NavigationView {
             VStack {
                 SearchBar(text: $viewModel.searchQuery)
-                    .padding(.top)
-                SearchResultsView<SearchViewModel>(data: viewModel.viewData)
+                                    .padding(.top)
+                SearchResultsView(data: viewModel.store.state.search.viewData)
             }
-            .environmentObject(viewModel)
         }
-        .navigationBarTitle(Text(viewModel.getAppTitle()))
-        .onDisappear {
-            viewModel.cancelSearchTask()
-        }
+//        .navigationBarTitle(Text(viewModel.getAppTitle()))
+//        .onDisappear {
+//            viewModel.cancelSearchTask()
+//        }
     }
 }
 

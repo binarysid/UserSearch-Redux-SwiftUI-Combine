@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SearchRouter: SearchRouterProtocol {
+struct SearchRouter {
     func presentDetailView(reposURL: URL, followersURL: URL?) {
 //        NavigationLink(destination: DetailView()) {}
     }

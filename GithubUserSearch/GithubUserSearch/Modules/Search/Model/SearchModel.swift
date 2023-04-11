@@ -33,9 +33,3 @@ struct GitHubUser: Codable {
         case followersURL = "followers_url"
     }
 }
-
-extension GitHubUser {
-    func toDomainObj() -> SearchDTO {
-        return SearchDTO(id: id, name: login, avatar: avatarURL, repos: reposURL, followers: followersURL)
-    }
-}

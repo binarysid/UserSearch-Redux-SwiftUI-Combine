@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct SearchBar: View {
-
     @Binding var text: String
     @State private var isEditing = false
 
@@ -24,14 +23,12 @@ struct SearchBar: View {
 
 // MARK: View Components
 extension SearchBar {
-
     private func cancelActionButton() -> some View {
         Button(action: {
             self.isEditing = false
             self.text = ""
-
         }) {
-            Text(SearchViewConstants.ActionTitle.cancel)
+            Text(GlobalConstants.Title.cancel)
         }
         .padding(.trailing, 10)
         .transition(.move(edge: .trailing))
