@@ -5,3 +5,20 @@
   Created by Linkon Sid on 12/4/23.
   
 */
+
+"appTitle" = "GitUserSearch";
+
+"Search.SearchBar.title" = "Search...";
+"Search.SearchBar.cancel" = "Cancel";
+
+"Images.magnifyingGlass" = "magnifyingglass";
+"Images.circleFill" = "multiply.circle.fill";
+
+"NetworkError.serviceNotFound" = "Service unreachable";
+"NetworkError.badURL" = "Invalid URL";
+"NetworkError.noDataFound" = "No data found";
+"NetworkError.duplicate" = "Duplicate found";
+"NetworkError.invalidResponse" = "Invalid response";
+"NetworkError.noConnection" = "No Internet conncetion";
+"NetworkError.invalidJson" = "Invalid Json Data";
+"NetworkError.taskRunning" = "There is already a task running ";

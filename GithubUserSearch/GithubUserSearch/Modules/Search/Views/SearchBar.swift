@@ -28,14 +28,14 @@ extension SearchBar {
             self.isEditing = false
             self.text = ""
         }) {
-            Text(GlobalConstants.Title.cancel)
+            Text(TextConstant.Search.SearchBar.cancel)
         }
         .padding(.trailing, 10)
         .transition(.move(edge: .trailing))
     }
 
     private func searchTextField() -> some View {
-        TextField(GlobalConstants.Title.searchBar, text: $text)
+        TextField(TextConstant.Search.SearchBar.title, text: $text)
             .padding(7)
             .padding(.horizontal, 25)
             .background(Color(.systemGray6))
@@ -49,7 +49,7 @@ extension SearchBar {
 
     private func overlayStyle() -> some View {
         HStack {
-            Image(systemName: GlobalConstants.Images.magnifyingGlass)
+            Image(systemName: TextConstant.Images.magnifyingGlass)
                 .foregroundColor(.gray)
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 .padding(.leading, 8)
@@ -58,7 +58,7 @@ extension SearchBar {
                 Button(action: {
                     self.text = ""
                 }) {
-                    Image(systemName: GlobalConstants.Images.circleFill)
+                    Image(systemName: TextConstant.Images.circleFill)
                         .foregroundColor(.gray)
                         .padding(.trailing, 8)
                 }

@@ -12,10 +12,10 @@
 ##   SwiftGen will parse all `.strings` files found in that folder.
  strings:
    inputs:
-     - ../GithubUserSearch/Modules/Helpers/Localizables/Localized.strings
+     - ../GithubUserSearch/Modules/Helper/Localizables/Localized.strings
    outputs:
      - templateName: structured-swift5
-       output: ../GithubUserSearch/Modules/Helpers/Localizables/Strings+Generated.swift
+       output: ../GithubUserSearch/Modules/Helper/Localizables/Strings+Generated.swift
        params:
         enumName: TextConstant
 
