@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "urlrequestbuilder",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/binarysid/URLRequestBuilder",
+      "state" : {
+        "branch" : "main",
+        "revision" : "cd40d60263b8a4650968ad910dad786618b60d8a"
+      }
+    }
+  ],
+  "version" : 2
+}

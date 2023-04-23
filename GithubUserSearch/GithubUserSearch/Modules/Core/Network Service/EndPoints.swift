@@ -6,10 +6,12 @@
 //
 
 import Foundation
+import URLRequestBuilder
 
 enum EndPoints {
     static let baseURL =  "https://" + Config.stringValue(forKey: "BASE_URL")
     static let token = Config.stringValue(forKey: "API_KEY")
+    static let requestBuilder = URLRequestBuilder()
 
     case userSearch(name: String, limit: Int)
 
@@ -17,7 +19,7 @@ enum EndPoints {
         switch self {
         case .userSearch(let name, let limit):
             let url = EndPoints.baseURL + "/search/users"
-            return RequestManager.getURLRequest(baseURL: url, queryParams: ["q": name, "per_page": String(limit)], headers: ["Authorization": "token \(EndPoints.token)"])
+            return EndPoints.requestBuilder.createRequestWith(baseURL: url, params: ["q": name, "per_page": String(limit)], headers: ["Authorization": "token \(EndPoints.token)"])
         }
     }
 }
